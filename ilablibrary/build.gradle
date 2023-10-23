@@ -1,6 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'org.jetbrains.kotlin.android'
-
+apply plugin: 'maven-publish'
 android {
     compileSdkVersion 33
     namespace 'medtel.in.medtelilab.ilablibrary'
@@ -18,9 +18,24 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
 }
-
+afterEvaluate {
+    publishing {
+        publications {
+// Creates a Maven publication called "release".
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.maheshlingam20'
+                artifactId = 'ilablibrary'
+                version = '1.0'
+            }
+        }
+    }
+}
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
