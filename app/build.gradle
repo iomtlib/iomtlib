@@ -5,7 +5,6 @@ plugins {
 }
 
 android {
-
     namespace 'medtel.in.medtelilab.ilablibrary'  // Replace with your desired package name
 
     compileSdk 33
