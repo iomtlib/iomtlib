@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#1E88E5</color>
+    <color name="colorPrimaryDark">#1A4E87</color>
+    <color name="colorAccent">#00C853</color>
+    <color name="colorAccent2">#D50000</color>
+    <color name="colorAccent3">#720385</color>
+    <color name="lightGrey">#E1DCDC</color>
+    <color name="colorGrey">#CCC7C7</color>
+    <color name="colorDarkGrey">#A6A5A5</color>
+    <color name="pureWhite">#FFFFFF</color>
+    <color name="FurnitureBrown">#663300</color>
+    <color name="background">#c96088</color>
+    <color name="buttoncolor">#ce2263</color>
+    <color name="test">#FFD4D9D0</color>
+    <color name="card_bg_color">#f6f6f6</color>
+    <color name="card_bg_dark_color">#0e0e0e</color>
+    <color name="blue">#2196f3</color>
+    <color name="green">#72bb53</color>
+    <color name="pregnancy_1">#B44691</color>
+    <color name="pregnancy_2">#E55A7C</color>
+    <color name="pregnancy_3">#891180</color>
+    <color name="pregnancy_4">#CB94C3</color>
+    <color name="pregnancy_5">#FFF5F6</color>
+    <color name="light_grey_bg">#ebebeb</color>
+    <color name="light_grey_bg_1">#f3f3f3</color>
+    <color name="red">#c01414</color>
+    <color name="yellow">#ffff00</color>
+    <color name="color_black">#000000</color>
+</resources>

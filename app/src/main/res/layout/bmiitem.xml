@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:padding="5sp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="36sp"
+            android:layout_height="36sp"
+            android:background="@drawable/circle"
+            android:id="@+id/weightlayout"
+            android:backgroundTint="#214772"
+            >
+            <ImageView
+                android:layout_width="36sp"
+                android:layout_height="36sp"
+                android:src="@drawable/bmiimagepng"
+                android:padding="10sp"
+                android:id="@+id/weighticons"
+                app:tint="#ffffff" />
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:layout_gravity="center"
+            android:textSize="13sp"
+            android:textColor="#476D99"
+            android:paddingLeft="15sp"
+            android:id="@+id/title"
+            android:text="BMI"
+
+            />
+
+        <LinearLayout
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6"
+            android:layout_gravity="center"
+            android:gravity="left">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="16sp"
+                android:textColor="@color/colorPrimary"
+                android:id="@+id/value"
+                android:text="15.6"
+                android:textStyle="bold"
+                android:padding="5sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="bottom"
+                android:textSize="10sp"
+                android:textColor="@color/colorPrimary"
+                android:id="@+id/smallvalue"
+                android:text="kg"
+                android:textStyle="bold"
+                android:paddingTop="5sp"
+                android:paddingBottom="6sp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:gravity="center"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/valuedescription"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/roundcornerbutton"
+                android:gravity="center"
+                android:paddingLeft="5sp"
+                android:paddingTop="1sp"
+                android:paddingRight="5sp"
+                android:paddingBottom="1sp"
+                android:text="****"
+                android:textColor="#ffffff"
+                android:textSize="8sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

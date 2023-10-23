@@ -1,0 +1,2061 @@
+{
+	"code": 200,
+	"message": "Success",
+	"fhr_devices": [
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:81:2C:5B:CF"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:F8:7B:89:E6"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:E7:75:40:EE"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:EF:85:5D:DB"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:A9:18:32:20"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:C2:5E:1B:B7"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:F3:18:A3:50"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:DC:07:ED:11"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:7C:7E:32:71"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:0E:E8:A7:ED"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:1B:49:C8:41"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:8C:12:A9:74"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:9F:FC:4B:9C"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:A3:67:4B:8F"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:6D:39:8A:4C"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:09:B7:00:DC"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:51:7A:FC:E3"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:89:D2:94:E5"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "8C:DE:52:DB:17:D4"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:05:96:2B:D8"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:02:78:10:90"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:F2:E2:4E:F5"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:8A:7E:89:23"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:86:A2:38:4E"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:93:28:CB:6B"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:71:9E:26:16"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:28:B4:A5:ED"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:38:59:FC:5F"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:24:D2:0F:47"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:CF:10:34:90"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:A8:01:F4:03"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:C7:68:2B:A2"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:2C:D5:94:43"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:89:21:46:C9"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:DF:AB:31:B4"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:3F:E3:C6:C6"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:C7:D6:44:1A"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:68:B6:18:1B"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:2B:4F:0E:7D"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:1A:AB:E2:D3"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:55:53:A2:55"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:F7:5F:B7:C2"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:BB:72:68:66"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:99:A4:2C:E2"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:2F:B2:55:28"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:D5:76:70:09"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:EF:E6:67:0F"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:5C:82:DE:FC"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:55:1A:44:D4"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:24:4B:5E:58"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:7D:06:A9:76"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:E3:63:19:80"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:B9:5B:3B:2E"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:C6:60:25:69"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:3D:73:7F:78"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:C0:61:33:1D"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:BF:07:69:CF"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "35:53:19:04:0C:7E"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:13:9C:FE:87"
+		},
+		{
+			"device_name": "Keyar Mini",
+			"device_id": "00:13:04:D2:04:FC"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "35:53:19:04:0A:2E"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "35:53:19:04:0C:7E"
+		}
+	],
+	"weight_devices": [
+		{
+			"device_name": "Weight Scale",
+			"device_id": "2C:AB:33:AA:FD:B9"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "25:ED:D4:24:B9:1C"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "02:E6:B6:2B:2D:88"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:84:3E:3D"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:86:58:D6"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:82:EC:56"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:86:D3:E0"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:86:99:C6"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:81:D0:72"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:86:D3:E0"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:82:2B:11"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:84:55:66"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:82:A2:C2"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:83:A4:A3"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:86:AF:95"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:83:4F:75"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:82:1C:B3"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:82:EC:6A"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:83:73:3B"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": " ED:67:39:83:A6:FA"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:83:AA:4F"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:82:2A:92"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:83:50:13"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:81:BF:E5"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:82:D9:01"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:86:47:8A"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:86:E8:CE"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:84:C8:A1"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:85:C4:A3"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:84:99:F4"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:86:7D:A9"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:86:5B:D8"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:82:28:3F"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:85:D1:48"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:84:A7:AC"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:85:C9:BE"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:84:62:B8"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:86:71:0A"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:84:1D:37"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:83:98:F7"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:86:6F:9B"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:86:56:56"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:83:84:60"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:86:DC:89"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:83:B1:E3"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:84:4E:D6"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:83:FB:7C"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:86:73:F6"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:83:09:40"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:84:52:44"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:84:5B:D0"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:86:56:63"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:83:7E:64"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:84:65:DA"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:86:95:8A"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:83:C6:67"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:86:92:81"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": " ED:67:39:86:A9:7D"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:86:AA:FA"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:83:F8:83"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:84:1C:76"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:86:A0:7B"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:85:22:4B"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:86:5E:3B"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:84:2F:E8"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:84:4E:A3"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:84:2D:D6"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:85:28:75"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:84:A8:EF"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:84:0A:A7"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:83:DA:32"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:83:DC:F0"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:84:61:3B"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:84:EB:DA"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:83:69:A2"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:86:15:F6"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED::67:39:54:47:46"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:84:4A:45"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED;67:39;86:E9:82"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:84:93:B7"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:86:B3:E0"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:85:03:D6"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:85:1A:EB"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:84:CE:BC"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:87:01:33"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:84:CA:CB"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:84:A7:96"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:85:EE:B5"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:86:E6:82"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:86:99:09"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED::67:39:84:82:4D"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:84:2B:D6"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:86:23:23"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39: 85:A5:67"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:85:F0:E7"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:85:FE:A6"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:85:5B:81"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:86:1C:4A"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:85:67:CA"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:85:AA:AC"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:86:4B:F9"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:86;23:04"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:86:29:65"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:86:A6:7F"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:83:D2:89"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:83:F5:96"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:6739:84:43:56"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:86:76:0A"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:86:79:75"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:84:00:5E"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:85:CA:01"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:84:F7:17"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:86:7E:8B"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:86:4D:0B"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:86:01:E0"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:84:67:97"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:84:67:97"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:85:A5:C7"
+		}
+	],
+	"hemo_devices": [
+		{
+			"device_name": "THB",
+			"device_id": "EC:4B:69:77:A8:82"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "E3:49:7E:0E:A0:B7"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "C2:AA:46:00:31:A3"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "CE:DA:74:62:FF:AF"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "F4:E0:8B:84:DD:D8"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "FC:E0:48:CD:87:28"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "F0:A7:6D:F5:94:64"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "C8:8C:99:33:FE:39"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "F5:06:9D:D3:7C:8B"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "D7:F3:E0:CB:24:F6"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "CD:9C:0A:46:69:66"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "E8:07:51:CA:1B:D6"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "F6:95:16:2E:B6:9C"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "CA:33:AE:9E:42:8C"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "F2:95:24:E7:27:BB"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "E1:B3:B8:16:20:63"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "D3:EA:52:EE:77:AB"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "D8:D3:32:41:67:69"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "D2:AD:69:25:35:1C"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "DC:68:9A:6F:EE:63"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "C6:7C:D7:E0:60:45"
+		},
+
+		{
+			"device_name": "THB",
+			"device_id": "E8:2C:6B:4B:3D:50"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "E2:70:7F:2F:EC:92"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "CF:32:2C:A1:0B:F6"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "EC:B4:D3:15:2F:1E"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "C2:58:8E:A7:4E:7A"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "C3:2B:00:B3:08:F8"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "FE:B9:BF:C1:46:00"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "EC:47:A0:66:A3:32"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "E7:7F:9C:CD:8C:1F"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "ED:E9:37:9C:DF:77"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "C7:7D:15:61:BA:CC"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "DD:32:BD:A7:4D:54"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "CA:EE:72:57:E5:07"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "C4:78:7C:AF:D4:4E"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "FB:74:B7:45:B5:F0"
+		},
+
+		{
+			"device_name": "THB",
+			"device_id": "D0:45:AA:12:9E:21"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "DB:F3:EF:C9:A2:11"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "FD:C3:8A:43:6F:B4"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "E4:C6:55:D5:EE:60"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "EE:EC:70:79:F7:C3"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "DA:B2:93:2D:04:8A"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "C6:C3:0D:2A:14:99"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "E3:20:3B:D0:CD:7C"
+		},{
+			"device_name": "THB",
+			"device_id": "D1:F1:18:C4:94:44"
+		},
+
+		{
+			"device_name": "THB",
+			"device_id": "E1:8B:71:B9:1A:EC"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "FA:7D:9A:F3:AD:FC"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "CC:E4:4C:04:30:EE"
+		},{
+			"device_name": "THB",
+			"device_id": "F2:B2:72:AC:8C:B2"
+		},{
+			"device_name": "THB",
+			"device_id": "DA:92:DF:8E:60:EF"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "EB:1A:AF:2C:A5:9D"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "D4:3D:28:DA:38:9F"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "F6:B8:A1:EF:CC:7D"
+		},{
+			"device_name": "THB",
+			"device_id": "EF:F2:BD:A7:6B:D3"
+		},{
+			"device_name": "THB",
+			"device_id": " EC:B5:46:37:F9:92"
+		},
+		{
+			"device_name": "THB",
+			"device_id": " F1:68:AA:66:54:BB"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "EB:29:44:E9:26:DD"
+		},{
+			"device_name": "THB",
+			"device_id": "C1:9E:62:8D:EA:A9"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "D6:0D:88:D9:DB:A0"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "F9:9E:A5:49:07:A6"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "F5:C5:BC:CB:54:60"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "DC:BA:9B:11:21:C4"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "E6:4F:93:83:BF:04"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "C6:42:6E:5C:17:5D"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "C6:64:74:4F:F6:C2"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "E7:1D:2E:FA:F3:E6"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "D8:F0:7F:66:65:45"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "D1:65:46:8D:E4:58"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "E5:2D:3C:B5:2B:E3"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "EB:3E:73:CC:88:38"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "FD:6C:D8:06:7F:1A"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "E1:BE:B9:FA:B5:AD"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "DA:9E:38:2E:A9:D0"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "CA:2A:E4:DF:C8:24"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "D5:D4:B8:EB:0D:05"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "F9:16:F3:7D:75:86"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "F3:02:98:AD:20:95"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "E4:03:28:E7:34:49"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "C3:02:8A:8E:95:EE"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "D2:41:87:84:EF:FF"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "EC:E5:9F:45:2D:71"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "F9:21:CE:3E:C0:5A"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "D7:0F:D7:25:0E:4A"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "CB:E7:70:FE:C3:79"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "D6:DA:39:80:15:7D"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "E0:22:D1:D4:77:08"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "C6:55:A0:EA:C6:63"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "E8:17:BC:1D:61:C1"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "FC:6F:D7:14:E9:49"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "EC:8F:0E:52:FA:5C"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "F7:1D:A9:66:F7:BE"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "C2:50:66:C2:F0:49"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "F2:0A:1D:70:FA:C8"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "F5:57:AA:57:58:CE"
+		},
+		{
+			"device_name": "THB",
+			"device_id": " FA:54:DE:15:0F:D4"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "D8:59:4C:56:6D:0B"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "F0:AC:32:29:A6:13"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "D5:73:7F:28:59:1A"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "E0:5C:31:2A:E9:11"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "EE:31:F7:28:5F:7B"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "F8:19:F5:40:4B:23"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "C8:10:14:7F:AC:C2"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "CD:69:AC:B2:1A:0A"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "E8:23:54:13:62:16"
+		},
+		{
+			"device_name": "THB",
+			"device_id": " CF:95:01:E2:DC:A4"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "D8:26:90:4B:16:34"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "E6:20:B8:2A:43:98"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "D4:22:4E:80:9D:B0"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "CB:AE:F1:DC:2F:87"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "C7:9E:24:04:2F:98"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "ED:A4:A8:49:AF:92"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "ED:F5:9D:73:04:89"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "C0:4A:8F:C8:28:B3"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "C9:79:12:7E:B0:18"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "C0:4A:8F:C8:28:B3"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "C9:79:12:7E:B0:18"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "CF:61:C0:A3:BE:6A"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "F6:BC:E2:D8:CC:2F"
+		},
+		{
+			"device_name": "THB",
+			"device_id": " F6:E4:6C:8F:1D:3E"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "E9:B5:1E:CB:5B:93"
+		}
+
+	],
+	"bp_devices": [
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8C:37"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8C:D9"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8D:A2"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8F:EE"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:91:C6"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:94:89"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:7E:16"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8D:9C"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:88:E4"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8A:58"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:97:0E"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8C:D6"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:72:12"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:96:11"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8A:2F"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:57:BB"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8B:C3"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8E:8D"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:57:99"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8A:4D"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8D:7A"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8C:02"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:89:DA"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8A:A8"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8F:87"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8D:49"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8F:FB"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:90:93"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:7B:22"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8E:EC"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:57:5E"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:4B:2B"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:57:C7"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:95:11"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:95:70"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8A:1E"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8C:91"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:89:90"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:82:90"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8E:0F"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:92:BD"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:89:D0"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:92:DC"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:57:95"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8D:2C"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:95:CD"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:95:00"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8B:49"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:97:EC"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:93:D1"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:4F:2C"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8B:75"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8C:17"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8C:D9"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8D:A2"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "CE:DA:74:62:FF:AF"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8C:37"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8C:BE"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:91:F3"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:57:3D"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:96:1E"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:97:3B"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8E:F5"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:91:E8"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:90:EE"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8C:E2"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8E:3B"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8E:F4"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:96:8C"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:90:44"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:95:08"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8B:7C"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:90:E2"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:93:14"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8B:70"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:91:1A"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:10:01:89:A7"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:92:CD"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8D:71"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:89:66"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:89:CC"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:96:C9"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:92:36"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:7C:39"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:94:ED"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:92:DD"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:91:8F"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:101:01:95:89"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:97:95"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:93:A2"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:95:D1"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:BD:77"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:B8E:7D"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:91:C9"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0;01:01:92:53"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:92:D3"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:96:8E"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:49:82"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:97:49"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8E:81"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:92:D7"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8C:49"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:90:5E"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8D:20"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:57:F1"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:97:7A"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8A:3F"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:92:32"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:96:45"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8A:06"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:79:3D"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8F:86"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:90:0F"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:92:CF"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8B:51"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8F:EF"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:95:DB"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:89:D2"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:57:EC"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:94:D9"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01: 97:EB"
+		}
+	],
+	"glucose_devices": [
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:27:DE:0F"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:AA:6A:C7"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:2C:1C:24"
+		},
+
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:2C:2F:34"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:AA:3A:B5"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:AA:1F:3B"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:D1:93:92"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:D1:83:FB"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:D1:83:F5"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:AA:1F:75"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:D1:AB:07"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:2C:17:A7"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:D1:83:E6"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:2C:3F:77"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:D1:9D:72"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:AA:2B:E2"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:D1:83:FC"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:2C:20:F6"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:2C:1D:94"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:D1:83:DB"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:27:E7:37"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:27:E3:68"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:28:4A:3D"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:AA:1F:2A"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:27:DA:16"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:AB:22:12"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:27:F7:7E"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:2C:41:60"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:D1:AB:0D"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:AA:6C:00"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:AA:2B:BA"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:AA:12:FE"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:28:47:A4"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:2C:15:FB"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:27:DE:63"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:2C:1D:8A"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:AA:14:87"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:2C:1C:13"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:AA:2B:A2"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:D1:98:25"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:2C:20:E3"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:2C:1C:45"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:D1:AB:26"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:2C:09:00"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:D1:9B:05"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:A9:FF:D4"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:D1:83:EF"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:2C:18:9E"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:D1:991;DB"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:AA:12:F1"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:D1:AB:1A"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:AA:1F:6D"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:6C:9D:0A"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:D1:98:37"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:AA:6C:50"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": " 84:C6:92:AA:6A:C7"
+		},
+
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:27:F7:43"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:28:43:92"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:D1:AD:BB"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:27:E5:16"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:28:43:B8"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:2C:38:19"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:AA:1F:17"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:D1:9B:09"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:AA:2B:89"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:2B:C8:43"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:27:DE:46"
+		},
+
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:2C:1C:26"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:2C:1C:25"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:D1:83:E9"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:27:E3:58"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:AA:6C:32"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:6C:99:B1"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:AA:62:9C"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:AA:1F:40"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:D1:AB:3E"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:2C:1C:4D"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:28:45:97"
+		},
+
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:AA:1F:1F"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:AA:1D:7B"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:2C:0E:63"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C9:92:27:E3:4C"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C9:92:D1:9B:25"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C9:92:27:DA:0C"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C9:92:D1:9D:52"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:2B:EA:54"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:D1:83:DC"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:AA:6A:9F"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:D1:AD:CE"
+		},
+
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:9C:85:75:1A"
+		}
+	]
+}
