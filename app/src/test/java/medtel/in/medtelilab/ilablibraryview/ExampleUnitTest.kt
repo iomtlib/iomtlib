@@ -1,4 +1,4 @@
-package medtel.`in`.medtelilab.ilablibrary
+package medtel.`in`.medtelilab.ilablibraryview
 
 import org.junit.Test
 

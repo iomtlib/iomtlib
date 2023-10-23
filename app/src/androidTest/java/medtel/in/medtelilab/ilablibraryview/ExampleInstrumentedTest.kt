@@ -1,4 +1,4 @@
-package medtel.`in`.medtelilab.ilablibrary
+package medtel.`in`.medtelilab.ilablibraryview
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
