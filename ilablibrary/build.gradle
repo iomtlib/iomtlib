@@ -3,7 +3,7 @@ apply plugin: 'org.jetbrains.kotlin.android'
 
 android {
     compileSdkVersion 33
-    namespace 'medtel.in.medtelilab.ilablibraryview'
+    namespace 'medtel.in.medtelilab.ilablibrary'
 
     defaultConfig {
         minSdkVersion 21

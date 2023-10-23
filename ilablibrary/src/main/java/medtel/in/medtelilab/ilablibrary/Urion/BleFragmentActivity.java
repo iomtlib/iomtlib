@@ -22,7 +22,7 @@ import androidx.fragment.app.FragmentActivity;
 
 import java.util.ArrayList;
 
-import medtel.in.medtelilab.ilablibrary.R;
+
 import medtel.in.medtelilab.ilablibrary.Urion.urionclass.BleServiceHelper;
 import medtel.in.medtelilab.ilablibrary.Urion.urionclass.L;
 import medtel.in.medtelilab.ilablibrary.Urion.urionclass.SampleGattAttributes;

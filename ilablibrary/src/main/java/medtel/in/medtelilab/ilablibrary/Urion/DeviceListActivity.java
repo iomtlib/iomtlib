@@ -22,6 +22,7 @@ import java.util.ArrayList;
 
 import medtel.in.medtelilab.ilablibrary.R;
 
+
 public class DeviceListActivity extends AppCompatActivity {
 
     public static String EXTRA_DEVICE_ADDRESS = "device_address";
