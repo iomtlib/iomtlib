@@ -1,0 +1,92 @@
+{
+	"fhr_devices": [{
+			"device_name": "VCOMIN",
+			"device_id": "4D:41:81:2C:5B:CF"
+
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "adfff"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "adfff"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "adfff"
+		}
+	],
+	"bp_devices": [{
+			"device_name": "BP",
+			"device_id": "D1:F0:01:01:8C:37"
+
+		},
+		{
+			"device_name": "BP",
+			"device_id": "adfff"
+		},
+		{
+			"device_name": "BP",
+			"device_id": "adfff"
+		},
+		{
+			"device_name": "BP",
+			"device_id": "adfff"
+		}
+	],
+	"Hemo_devices": [{
+			"device_name": "Hemo",
+			"device_id": "adfff"
+
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "adfff"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "adfff"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "adfff"
+		}
+	],
+	"weight_devices": [{
+			"device_name": "VCOMIN",
+			"device_id": "adfff"
+
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "adfff"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "adfff"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "adfff"
+		}
+	],
+	"Glucose_devices": [{
+			"device_name": "VCOMIN",
+			"device_id": "adfff"
+
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "adfff"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "adfff"
+		},
+		{
+			"device_name": "VCOMIN",
+			"device_id": "adfff"
+		}
+	]
+}

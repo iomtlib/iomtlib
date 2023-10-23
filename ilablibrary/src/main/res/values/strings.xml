@@ -1,0 +1,119 @@
+<resources>
+    <string name="app_name">Jhpiego</string>
+
+    <string name="scanBtn_scan">SCAN</string>
+    <string name="scanBtn_stop">STOP</string>
+    <string name="location_permission_title">Location permission required</string>
+    <string name="location_permission_text">Starting from Android M (6.0), the system requires apps to be granted \nlocation access in order to scan for BLE devices.</string>
+    <string name="location_permission_btn">OK</string>
+    <string name="all_files_permission_title">All files permission required</string>
+    <string name="all_files_permission_text">The application needs All Files Storage Permission \nto store and manage the devices\' information \n\nPlease allow All files access for Jhpiego App</string>
+    <string name="all_files_permission_btn">OK</string>
+    <string name="ble_scan_fail_error">Ble scan failed with error code : </string>
+
+    <string name="setup_dialog_title">Device Setup</string>
+    <string name="setup_dialog_text">Please enter a name for the device to setup the device</string>
+    <string name="setup_name_error">Name can\'t be empty!</string>
+    <string name="setup_successful">Device setup successful!</string>
+    <string name="name_exists_error">Device name already exits!</string>
+    <string name="device_exists_error">Device already setup! Please check the Dashboard</string>
+    <string name="setup_error">Setup Error! Please try again</string>
+
+
+    <string name="connecting_text">CONNECTING..</string>
+    <string name="connected_text">CONNECTED</string>
+    <string name="connected_successfully"> connected successfully!</string>
+    <string name="disconnected_successfully"> disconnected successfully!</string>
+    <string name="bp_units">mmHg\nmmHg\n/min</string>
+    <string name="awm_units">Kgs</string>
+    <string name="po_units">%\nbpm</string>
+    <string name="bwm_units">Kgs</string>
+    <string name="fhr_uc_units">\nbpm\n\n\n\nbpm\n\n\ncount</string>
+    <string name="device_data_error">Error from device:  </string>
+    <string name="setup_screen_btn">Setup Device</string>
+    <string name="dashboard_screen_btn">Dashboard</string>
+    <string name="awm_layout_btn">Adult Weighing Machine</string>
+    <string name="bp_layout_btn">Blood Pressure</string>
+    <string name="po_layout_btn">Pulse Oximetry</string>
+    <string name="fhrUc_layout_btn">FHR and UC</string>
+    <string name="bwm_layout_btn">Baby Weighing Machine</string>
+    <string name="yes">Yes</string>
+    <string name="contact_dealer">The blood pressure monitor is abnormal, please contact the dealer.</string>
+    <string name="bluetooth_connecting">blood pressure monitor is connecting, please wait......</string>
+    <string name="bluetooth_disconected">blood pressure monitor is disconected, will be scaning again</string>
+    <string name="bluetooth_not_available">The bloodpressure monitor is not available.</string>
+    <string name="name_empty">The user name can not be empty！</string>
+    <string name="open_bluetooth">Please open your bluetooth</string>
+    <string name="user">User</string>
+    <string name="height">Height:</string>
+    <string name="weight">Weight:</string>
+    <string name="age">Age:</string>
+    <string name="home">Home	</string>
+    <string name="trends">Trends</string>
+    <string name="history2">History</string>
+    <string name="x_name">Systolic blood pressure(mmHg)</string>
+    <string name="y_name">Diastolic blood pressure(mmHg)</string>
+    <string name="connect_prompt">Connect</string>
+    <string name="sure_open">bluetooth is scaning, please make sure your device is turning on/ restart device......</string>
+    <string name="pairing">Pairing, please wait......</string>
+    <string-array name="connect_state">
+        <item>connecting...</item>
+        <item>Not connected</item>
+        <item>The connected </item>
+    </string-array>
+    <string-array name="connect_message">
+        <item>Pair fail,please return to Start.</item>
+        <item>Device connection is lost</item>
+    </string-array>
+    <string name="scanning">Scan the unknown device...</string>
+
+    <string name="select_device">Select a device to connect</string>
+    <string name="none_paired">Not already paired device</string>
+    <string name="none_found">No connection is established</string>
+    <string name="sys">Systolic blood pressure：</string>
+    <string name="dia">Diastolic blood pressure：</string>
+    <string name="pul">Puls：</string>
+    <string name="sd_kq">  Please sit down and keep quiet</string>
+    <string name="paired_devices">The paired devices</string>
+    <string name="other_match">Other equipment can be matched</string>
+
+    <string name="measured_results">The measured results</string>
+    <string name="history">History</string>
+    <string name="scan">Scan</string>
+    <string name="please_open_blue">Please turn on Bluetooth first</string>
+    <string name="notifyTitle">Prompt</string>
+    <string name="gpsNotifyMsg">Current mobile phone scanning Bluetooth needs to open the positioning function</string>
+    <string name="start_listening">START LISTENING!</string>
+    <string name="next">Next</string>
+    <string name="first_trimester">First Trimester</string>
+    <string name="second_trimester">Second Trimester</string>
+    <string name="third_trimester">Third Trimester</string>
+    <string name="first_trimester_text">Locating the heartbeat:\n\n
+        Generally, the fetal heart is located 10cm below the lower abdomen, positioned centrally.\n\n\n
+        \u2022 FHR is usually not clearly heard in the first 12 weeks.\n\n
+        \u2022 In case the heartbeat is not heard, nothing to worry about.\n\n
+        \u2022 Limit one session to less than 5 minutes.\n</string>
+
+    <string name="first_trimester_text1">Locating the heartbeat:\n\n
+        Generally, the fetal heart is located 10cm below the umbilicus, positioned centrally.\n\n\n
+        \u2022 Most people are unable to hear a clear heartbeat before 12 weeks, in case you don’t hear a heartbeat don’t worry.\n\n
+        \u2022 Don’t use the device very frequently (more than once a day).\n\n
+        \u2022 Limit one session to less than 5 minutes.\n</string>
+    <string name="second_trimester_text">Locating the heartbeat:\n\n
+      Start from the lower abdomen, and move the probe up (centrally). If the heartbeat is not heard, gradually move the probe to the sides (left/right one after the other). Do not go above the umbilicus.\n\n\n
+        \u2022 In case you don’t find a heartbeat, there is nothing to worry about. Locating the heartbeat is difficult before the third trimester.\n\n
+        \u2022 Limit one session to less than 5 minutes.\n\n
+        \u2022 Any reading greater than  100 bpm is the baby’s heartbeat and any reading between 70 bpm to 90 bpm is the mother’s..</string>
+    <string name="third_trimester_text">Locating the heartbeat:\n\n
+        Start from the lower abdomen, slowly glide the probe from the extreme right to extreme left. Keep moving upwards as long as the heartbeat is not found. The heartbeat may be found higher than the umbilicus.\n\n\n
+        \u2022  Any heartbeat above 100 bpm is the baby’s. Anything between 70 to 90 bpm might be the mother’s.\n\n
+        \u2022 In case  a heartbeat is not found try again after sometime.\n\n
+       </string>
+    <string name="pairmonitor">Pair your FHR Monitor to your  phone via bluetooth by clicking on connect</string>
+    <string name="followinstr">Follow instructions on the next screen to locate your baby\'s heartbeat</string>
+    <string name="fhr_conn_error">To reconnect, Please switch off the FHR device</string>
+    <string name="fhr_manual_entry_1">We are looking into the problem</string>
+    <string name="fhr_manual_entry_2"> For now, please enter the FHR reading manually!</string>
+    <string name="setting">Settings</string>
+    <string name="cancel">Cancel</string>
+</resources>

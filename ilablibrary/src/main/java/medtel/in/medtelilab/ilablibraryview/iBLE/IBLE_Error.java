@@ -1,0 +1,16 @@
+package medtel.in.medtelilab.ilablibraryview.iBLE;
+
+
+public enum IBLE_Error {
+    ERROR_DEVICE_NOT_SUPPORTED,
+    ERROR_DISCOVERY_SERVICE,
+    ERROR_OPERATE_NOT_SUPPORTED,
+    ERROR_AUTH_ERROR_WHILE_BONDED,
+    ERROR_GATT_NULL,
+    ERROR_BLUETOOTH_DEVICE_NULL,
+    ERROR_CONNECT_FAIL,
+    ERROR_INVALID_SOFTWARE_VERSION;
+
+    private IBLE_Error() {
+    }
+}

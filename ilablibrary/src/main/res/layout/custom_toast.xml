@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/customtoast"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="#75000000"
+    android:visibility="gone"
+    android:paddingRight="10dp"
+    android:paddingLeft="10dp"
+    >
+
+    <androidx.cardview.widget.CardView
+        app:cardBackgroundColor= "#75000000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="40dp"
+        android:layout_marginRight="20sp"
+        android:layout_marginLeft="20sp"
+        app:cardElevation="10dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+            android:background="@drawable/borderrect">
+            <ImageView
+                android:layout_width="120sp"
+                android:id="@+id/image"
+                android:layout_marginTop="30sp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/systemupdate"
+                android:layout_height="120sp">
+
+            </ImageView>
+            <TextView
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_below="@+id/image"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:text="Please upgrade library"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <TextView
+                android:id="@+id/oktext"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="bottom|center"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="center|center_horizontal"
+                android:text="OK"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
