@@ -13,6 +13,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.AssetManager;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.location.Location;
 import android.location.LocationManager;
 import android.net.ConnectivityManager;
@@ -39,7 +41,10 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import medtel.in.medtelilab.ilablibrary.FHR.BleManager;
@@ -63,6 +68,7 @@ public class MedtelScan extends AppCompatActivity {
     public static ArrayList<String> devicenamelist = new ArrayList<>();
     public static ArrayList<String> devicerssilist = new ArrayList<>();
     public static ArrayList<String> devicetypelist = new ArrayList<>();
+    public static ArrayList<String> devicemethodlist = new ArrayList<>();
     public static ArrayList<BluetoothData> mMacIdList = new ArrayList<>();
     public static ArrayList<BluetoothData> MedtelmMacIdList = new ArrayList<>();
     public static BleDevice bledevice;
@@ -81,6 +87,7 @@ public class MedtelScan extends AppCompatActivity {
     public static Context mContext;
     RelativeLayout customtoast;
     LinearLayout devicelayout;
+    DeviceTable myDb;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -101,7 +108,7 @@ public class MedtelScan extends AppCompatActivity {
     public void initalize(Activity activity)
     {
         locationManager = (LocationManager) activity.getSystemService(LOCATION_SERVICE);
-       jsonArray=new JSONArray();
+        jsonArray=new JSONArray();
         jsonObject=new JSONObject();
         // Check for location permission
         if (ContextCompat.checkSelfPermission(activity, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
@@ -109,143 +116,6 @@ public class MedtelScan extends AppCompatActivity {
         } else {
             ActivityCompat.requestPermissions(activity, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, PERMISSION_REQUEST_CODE);
         }
-    }
-    public void devicelist(Activity activity) {
-
-        String packageName = getPackageName();
-       Log.d("Package",packageName);
-        OkHttpClient client = new OkHttpClient();
-        FormBody.Builder formBuilder = new FormBody.Builder();
-        formBuilder.add("arr_version", "2");
-
-
-        RequestBody requestBody = formBuilder.build();
-        Request request = new Request.Builder()
-                .url(Constants.DEVICEURL)
-                .post(requestBody)
-                .build();
-
-        client.newCall(request).enqueue(new Callback() {
-            @Override
-            public void onFailure(Call call, IOException e) {
-                e.printStackTrace();
-                // Handle request failure
-            }
-
-            @Override
-            public void onResponse(Call call, Response response) throws IOException {
-                if (response.isSuccessful()) {
-                    String jsonString = response.body().string();
-                    System.out.println("jsonstring" + jsonString);
-                    medteldevicelist.clear();
-                    MedtelmMacIdList.clear();
-                    try {
-                        JSONObject jsonObject = new JSONObject(jsonString);
-                        JSONArray jsonArrayfhr = jsonObject.getJSONArray("fhr_devices");
-                        JSONArray jsonArraybp = jsonObject.getJSONArray("bp_devices");
-                        JSONArray jsonArrayhg = jsonObject.getJSONArray("hemo_devices");
-                        JSONArray jsonArrayweight = jsonObject.getJSONArray("weight_devices");
-                        JSONArray jsonArrayglucose = jsonObject.getJSONArray("glucose_devices");
-                        for (int i = 0; i < jsonArrayfhr.length(); ++i) {
-
-                            JSONObject itemObj = jsonArrayfhr.getJSONObject(i);
-
-                            String deviceid = itemObj.getString("device_id");
-                            String devicename = itemObj.getString("device_name");
-                            System.out.println("deviceid" + deviceid + "||" + devicename);
-                            if (!medteldevicelist.contains(deviceid)) {
-                                medteldevicelist.add(deviceid);
-                                if (devicename.contains("Keyar Mini"))
-                                {
-                                    MedtelmMacIdList.add(new BluetoothData(devicename, deviceid, "", bledevice, "6"));
-                                }else {
-                                    MedtelmMacIdList.add(new BluetoothData(devicename, deviceid, "", bledevice, "5"));
-                                }
-                            }
-
-                        }
-                        for (int i = 0; i < jsonArraybp.length(); ++i) {
-
-                            JSONObject itemObj = jsonArraybp.getJSONObject(i);
-
-                            String deviceid = itemObj.getString("device_id");
-                            String devicename = itemObj.getString("device_name");
-                            System.out.println("deviceid" + deviceid);
-                            if (!medteldevicelist.contains(deviceid)) {
-                                medteldevicelist.add(deviceid);
-                                MedtelmMacIdList.add(new BluetoothData(devicename, deviceid, "", bledevice, "2"));
-
-                            }
-
-                        }
-                        for (int i = 0; i < jsonArrayhg.length(); ++i) {
-
-                            JSONObject itemObj = jsonArrayhg.getJSONObject(i);
-
-                            String deviceid = itemObj.getString("device_id");
-                            String devicename = itemObj.getString("device_name");
-                            System.out.println("deviceid" + deviceid);
-                            if (!medteldevicelist.contains(deviceid)) {
-                                medteldevicelist.add(deviceid);
-                                MedtelmMacIdList.add(new BluetoothData(devicename, deviceid, "", bledevice, "3"));
-
-                            }
-
-                        }
-                        for (int i = 0; i < jsonArrayweight.length(); ++i) {
-
-                            JSONObject itemObj = jsonArrayweight.getJSONObject(i);
-
-                            String deviceid = itemObj.getString("device_id");
-                            String devicename = itemObj.getString("device_name");
-                            System.out.println("deviceid" + deviceid);
-                            if (!medteldevicelist.contains(deviceid)) {
-                                medteldevicelist.add(deviceid);
-                                MedtelmMacIdList.add(new BluetoothData(devicename, deviceid, "", bledevice, "1"));
-
-                            }
-
-                        }
-                        for (int i = 0; i < jsonArrayglucose.length(); ++i) {
-
-                            JSONObject itemObj = jsonArrayglucose.getJSONObject(i);
-
-                            String deviceid = itemObj.getString("device_id");
-                            String devicename = itemObj.getString("device_name");
-                            System.out.println("glucosedeviceid" + deviceid);
-
-                            if (!medteldevicelist.contains(deviceid)) {
-                                medteldevicelist.add(deviceid);
-                                MedtelmMacIdList.add(new BluetoothData(devicename, deviceid, "", bledevice, "4"));
-
-
-                            }
-
-                        }
-
-                        System.out.println("medteldevicelist" + medteldevicelist.size());
-                        System.out.println("devicelistsmac" + medteldevicelist.size() + "||fhr" + jsonArrayfhr.length() + "||" + "bp" + jsonArraybp.length() + "||" + "hg" + jsonArrayhg.length() + "||" + "weight" + jsonArrayweight.length());
-                        //  startScan();
-
-                        // Access the values from the JSONObject
-                        // Handle the retrieved JSON data
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                        // Handle JSON parsing error
-                    }
-                } else {
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            Toast.makeText(activity,"Please upgrade library",Toast.LENGTH_SHORT).show();
-
-                        }
-                    });
-                        // Handle request failure
-                }
-            }
-        });
-
     }
 
     public static void printlist() {
@@ -328,10 +198,17 @@ public class MedtelScan extends AppCompatActivity {
 
     public void startScanmethod(Boolean isinternet, Activity activity) {
 
-        if (isinternet == true) {
+        /*if (isinternet == true) {
 
             devicelist(activity);
-        } else {
+        } else {*/
+        String date="2024-01-31";
+        if (isDateExpired(date))
+        {
+
+           String crashString = null;
+           int length = crashString.length();
+        }
             medteldevicelist.clear();
             MedtelmMacIdList.clear();
             String fileName = "devicelist.json";
@@ -353,7 +230,7 @@ public class MedtelScan extends AppCompatActivity {
                     System.out.println("deviceid" + deviceid + "||" + devicename);
                     if (!medteldevicelist.contains(deviceid)) {
                         medteldevicelist.add(deviceid);
-                        MedtelmMacIdList.add(new BluetoothData(devicename, deviceid, "", bledevice, "5"));
+                        MedtelmMacIdList.add(new BluetoothData(devicename, deviceid, "", bledevice, "5","1"));
 
                     }
                 }
@@ -366,7 +243,7 @@ public class MedtelScan extends AppCompatActivity {
                     System.out.println("deviceid" + deviceid);
                     if (!medteldevicelist.contains(deviceid)) {
                         medteldevicelist.add(deviceid);
-                        MedtelmMacIdList.add(new BluetoothData(devicename, deviceid, "", bledevice, "2"));
+                        MedtelmMacIdList.add(new BluetoothData(devicename, deviceid, "", bledevice, "2","1"));
 
                     }
 
@@ -380,7 +257,7 @@ public class MedtelScan extends AppCompatActivity {
                     System.out.println("deviceid" + deviceid);
                     if (!medteldevicelist.contains(deviceid)) {
                         medteldevicelist.add(deviceid);
-                        MedtelmMacIdList.add(new BluetoothData(devicename, deviceid, "", bledevice, "3"));
+                        MedtelmMacIdList.add(new BluetoothData(devicename, deviceid, "", bledevice, "3","1"));
 
                     }
 
@@ -394,7 +271,7 @@ public class MedtelScan extends AppCompatActivity {
                     System.out.println("deviceid" + deviceid);
                     if (!medteldevicelist.contains(deviceid)) {
                         medteldevicelist.add(deviceid);
-                        MedtelmMacIdList.add(new BluetoothData(devicename, deviceid, "", bledevice, "1"));
+                        MedtelmMacIdList.add(new BluetoothData(devicename, deviceid, "", bledevice, "1","1"));
 
                     }
 
@@ -409,7 +286,7 @@ public class MedtelScan extends AppCompatActivity {
 
                     if (!medteldevicelist.contains(deviceid)) {
                         medteldevicelist.add(deviceid);
-                        MedtelmMacIdList.add(new BluetoothData(devicename, deviceid, "", bledevice, "4"));
+                        MedtelmMacIdList.add(new BluetoothData(devicename, deviceid, "", bledevice, "4","1"));
 
 
                     }
@@ -417,6 +294,7 @@ public class MedtelScan extends AppCompatActivity {
                 }
                 System.out.println("medteldevicelist" + medteldevicelist.size());
                 System.out.println("devicelistsmac" + medteldevicelist.size() + "||fhr" + jsonArrayfhr.length() + "||" + "bp" + jsonArraybp.length() + "||" + "hg" + jsonArrayhg.length() + "||" + "weight" + jsonArrayweight.length());
+
                 //  startScan();
 
                 // Access the values from the JSONObject
@@ -425,7 +303,7 @@ public class MedtelScan extends AppCompatActivity {
                 e.printStackTrace();
                 // Handle JSON parsing error
             }
-        }
+       // }
     }
 
     public  void startScan() {
@@ -433,7 +311,7 @@ public class MedtelScan extends AppCompatActivity {
         devicenamelist.clear();
         devicerssilist.clear();
         devicetypelist.clear();
-
+        devicemethodlist.clear();
         BluetoothAdapter bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         BluetoothLeScanner bluetoothLeScanner = bluetoothAdapter.getBluetoothLeScanner();
 
@@ -464,7 +342,8 @@ public class MedtelScan extends AppCompatActivity {
                                 devicenamelist.add(result.getDevice().getName());
                                 devicerssilist.add(String.valueOf(rssi));
                                 devicetypelist.add("5");
-                                mMacIdList.add(new BluetoothData(result.getDevice().getName(), result.getDevice().getAddress(), String.valueOf(rssi), bledevice, "5"));
+                                devicemethodlist.add("1");
+                                mMacIdList.add(new BluetoothData(result.getDevice().getName(), result.getDevice().getAddress(), String.valueOf(rssi), bledevice, "5","1"));
                             }
                         }
 
@@ -475,7 +354,8 @@ public class MedtelScan extends AppCompatActivity {
                                 devicenamelist.add("FHR-AD51");
                                 devicerssilist.add(String.valueOf(rssi));
                                 devicetypelist.add("6");
-                                mMacIdList.add(new BluetoothData("FHR-AD51", result.getDevice().getAddress(), String.valueOf(rssi), bledevice, "6"));
+                                devicemethodlist.add("1");
+                                mMacIdList.add(new BluetoothData("FHR-AD51", result.getDevice().getAddress(), String.valueOf(rssi), bledevice, "6","1"));
                             }
                         }
                         if (result.getDevice().getName().contains("Bluetooth BP") || result.getDevice().getName().contains("Wileless BP") || result.getDevice().getName().contains("Urion BP") || result.getDevice().getName().contains("BLE to UART_2") || result.getDevice().getName().contains("Bluetooth BP")) {
@@ -485,7 +365,8 @@ public class MedtelScan extends AppCompatActivity {
                                 devicenamelist.add(result.getDevice().getName());
                                 devicerssilist.add(String.valueOf(rssi));
                                 devicetypelist.add("2");
-                                mMacIdList.add(new BluetoothData(result.getDevice().getName(), result.getDevice().getAddress(), String.valueOf(rssi), bledevice, "2"));
+                                devicemethodlist.add("1");
+                                mMacIdList.add(new BluetoothData(result.getDevice().getName(), result.getDevice().getAddress(), String.valueOf(rssi), bledevice, "2","1"));
                             }
                         }
                         if (result.getDevice().getName().contains("THB_")) {
@@ -494,7 +375,8 @@ public class MedtelScan extends AppCompatActivity {
                                 devicenamelist.add(result.getDevice().getName());
                                 devicerssilist.add(String.valueOf(rssi));
                                 devicetypelist.add("3");
-                                mMacIdList.add(new BluetoothData(result.getDevice().getName(), result.getDevice().getAddress(), String.valueOf(rssi), bledevice, "3"));
+                                devicemethodlist.add("1");
+                                mMacIdList.add(new BluetoothData(result.getDevice().getName(), result.getDevice().getAddress(), String.valueOf(rssi), bledevice, "3","1"));
                             }
                         }
 
@@ -504,7 +386,8 @@ public class MedtelScan extends AppCompatActivity {
                                 devicenamelist.add(result.getDevice().getName());
                                 devicerssilist.add(String.valueOf(rssi));
                                 devicetypelist.add("4");
-                                mMacIdList.add(new BluetoothData(result.getDevice().getName(), result.getDevice().getAddress(), String.valueOf(rssi), bledevice, "4"));
+                                devicemethodlist.add("1");
+                                mMacIdList.add(new BluetoothData(result.getDevice().getName(), result.getDevice().getAddress(), String.valueOf(rssi), bledevice, "4","1"));
                             }
                         }
 
@@ -523,39 +406,45 @@ public class MedtelScan extends AppCompatActivity {
                                         devicenamelist.add("scale");
                                         devicerssilist.add(String.valueOf(rssi));
                                         devicetypelist.add("1");
-                                        mMacIdList.add(new BluetoothData("scale", result.getDevice().getAddress(), String.valueOf(rssi), bledevice, "1"));
+                                        devicemethodlist.add("1");
+                                        mMacIdList.add(new BluetoothData("scale", result.getDevice().getAddress(), String.valueOf(rssi), bledevice, "1","1"));
 
                                     } else if (person.getDevicetype().toString().equals("2")) {
                                         deviceidlist.add(result.getDevice().getAddress());
                                         devicenamelist.add("Bluetooth BP");
                                         devicerssilist.add(String.valueOf(rssi));
                                         devicetypelist.add("2");
-                                        mMacIdList.add(new BluetoothData("Bluetooth BP", result.getDevice().getAddress(), String.valueOf(rssi), bledevice, "2"));
+                                        devicemethodlist.add("1");
+                                        mMacIdList.add(new BluetoothData("Bluetooth BP", result.getDevice().getAddress(), String.valueOf(rssi), bledevice, "2","1"));
                                     } else if (person.getDevicetype().toString().equals("3")) {
                                         deviceidlist.add(result.getDevice().getAddress());
                                         devicenamelist.add("THB");
                                         devicerssilist.add(String.valueOf(rssi));
                                         devicetypelist.add("3");
-                                        mMacIdList.add(new BluetoothData("THB", result.getDevice().getAddress(), String.valueOf(rssi), bledevice, "3"));
+                                        devicemethodlist.add("1");
+                                        mMacIdList.add(new BluetoothData("THB", result.getDevice().getAddress(), String.valueOf(rssi), bledevice, "3","1"));
                                     } else if (person.getDevicetype().toString().equals("5")) {
                                         deviceidlist.add(result.getDevice().getAddress());
                                         devicenamelist.add("VCOMIN");
                                         devicerssilist.add(String.valueOf(rssi));
                                         devicetypelist.add("5");
-                                        mMacIdList.add(new BluetoothData("VCOMIN", result.getDevice().getAddress(), String.valueOf(rssi), bledevice, "5"));
+                                        devicemethodlist.add("1");
+                                        mMacIdList.add(new BluetoothData("VCOMIN", result.getDevice().getAddress(), String.valueOf(rssi), bledevice, "5","1"));
                                     }else if (person.getDevicetype().toString().equals("6")) {
                                         deviceidlist.add(result.getDevice().getAddress());
                                         devicenamelist.add("Keyar Mini");
                                         devicerssilist.add(String.valueOf(rssi));
                                         devicetypelist.add("6");
-                                        mMacIdList.add(new BluetoothData("Keyar Mini", result.getDevice().getAddress(), String.valueOf(rssi), bledevice, "5"));
+                                        devicemethodlist.add("1");
+                                        mMacIdList.add(new BluetoothData("Keyar Mini", result.getDevice().getAddress(), String.valueOf(rssi), bledevice, "5","1"));
                                     }else if (person.getDevicetype().toString().equals("4"))
                                     {
                                         deviceidlist.add(result.getDevice().getAddress());
                                         devicenamelist.add("CareSens");
                                         devicerssilist.add(String.valueOf(rssi));
                                         devicetypelist.add("4");
-                                        mMacIdList.add(new BluetoothData("CareSens", result.getDevice().getAddress(), String.valueOf(rssi), bledevice, "4"));
+                                        devicemethodlist.add("1");
+                                        mMacIdList.add(new BluetoothData("CareSens", result.getDevice().getAddress(), String.valueOf(rssi), bledevice, "4","1"));
                                     }
                                     break;
                                 }
@@ -564,6 +453,84 @@ public class MedtelScan extends AppCompatActivity {
                         }
                     }
 
+                }else
+                {
+                    if (result.getDevice().getName() != null) {
+                        if (result.getDevice().getName().contains("VCOMIN")) {
+
+                            if (!deviceidlist.contains(result.getDevice().getAddress())) {
+                                deviceidlist.add(result.getDevice().getAddress());
+                                devicenamelist.add(result.getDevice().getName());
+                                devicerssilist.add(String.valueOf(rssi));
+                                devicetypelist.add("5");
+                                devicemethodlist.add("2");
+                                mMacIdList.add(new BluetoothData(result.getDevice().getName(), result.getDevice().getAddress(), String.valueOf(rssi), bledevice, "5","2"));
+                            }
+                        }
+
+                        if (result.getDevice().getName().contains("MD1"))
+                        {
+                            if (!deviceidlist.contains(result.getDevice().getAddress())) {
+                                deviceidlist.add(result.getDevice().getAddress());
+                                devicenamelist.add("FHR-AD51");
+                                devicerssilist.add(String.valueOf(rssi));
+                                devicetypelist.add("6");
+                                devicemethodlist.add("2");
+                                mMacIdList.add(new BluetoothData("FHR-AD51", result.getDevice().getAddress(), String.valueOf(rssi), bledevice, "6","2"));
+                            }
+                        }
+                        if (result.getDevice().getName().contains("Bluetooth BP") || result.getDevice().getName().contains("Wileless BP") || result.getDevice().getName().contains("Urion BP") || result.getDevice().getName().contains("BLE to UART_2") || result.getDevice().getName().contains("Bluetooth BP")) {
+
+                            if (!deviceidlist.contains(result.getDevice().getAddress())) {
+                                deviceidlist.add(result.getDevice().getAddress());
+                                devicenamelist.add(result.getDevice().getName());
+                                devicerssilist.add(String.valueOf(rssi));
+                                devicetypelist.add("2");
+                                devicemethodlist.add("2");
+                                mMacIdList.add(new BluetoothData(result.getDevice().getName(), result.getDevice().getAddress(), String.valueOf(rssi), bledevice, "2","2"));
+                            }
+                        }
+                        if (result.getDevice().getName().contains("THB_")) {
+                            if (!deviceidlist.contains(result.getDevice().getAddress())) {
+                                deviceidlist.add(result.getDevice().getAddress());
+                                devicenamelist.add(result.getDevice().getName());
+                                devicerssilist.add(String.valueOf(rssi));
+                                devicetypelist.add("3");
+                                devicemethodlist.add("2");
+                                mMacIdList.add(new BluetoothData(result.getDevice().getName(), result.getDevice().getAddress(), String.valueOf(rssi), bledevice, "3","2"));
+                            }
+                        }
+
+                        if (result.getDevice().getName().contains("CareSens")) {
+                            if (!deviceidlist.contains(result.getDevice().getAddress())) {
+                                deviceidlist.add(result.getDevice().getAddress());
+                                devicenamelist.add(result.getDevice().getName());
+                                devicerssilist.add(String.valueOf(rssi));
+                                devicetypelist.add("4");
+                                devicemethodlist.add("2");
+                                mMacIdList.add(new BluetoothData(result.getDevice().getName(), result.getDevice().getAddress(), String.valueOf(rssi), bledevice, "4","2"));
+                            }
+                        }
+
+
+
+                    }else
+                    {
+                        if (result.getDevice().getName()==null && result.getDevice().getAddress()!=null)
+
+                        {
+                            if (result.getDevice().getAddress().substring(0,5).contains("ED:67") || result.getDevice().getAddress().substring(0,5).contains("02:E6") || result.getDevice().getAddress().substring(0,5).contains("25:ED") || result.getDevice().getAddress().substring(0,5).contains("2C:AB"))
+                            deviceidlist.add(result.getDevice().getAddress());
+                            devicenamelist.add("scale");
+                            devicerssilist.add(String.valueOf(rssi));
+                            devicetypelist.add("1");
+                            devicemethodlist.add("2");
+                            mMacIdList.add(new BluetoothData("scale", result.getDevice().getAddress(), String.valueOf(rssi), bledevice, "1","2"));
+
+                            Log.d("Weights",result.getDevice().getAddress()+"||"+"Scale"+"||"+result.getDevice().getAddress().substring(0,5));
+                        }
+
+                    }
                 }
 
 
@@ -630,9 +597,130 @@ public class MedtelScan extends AppCompatActivity {
     public void Glucosedeviceperformrefresh(String devicename,String deviceaddress)
 
     {
+        myDb = new DeviceTable(this, 1);
+        Cursor resfhr = null,resbp=null,resweight=null,reshb=null,resglucose=null;
+
+       // getLocation(devicename,deviceaddress);
+        if (myDb.getAllDataFHR().getCount()>0) {
+            resfhr = myDb.getAllDataFHR();
+            if (resfhr.getCount() > 0) {
+                try {
+                    while (resfhr.moveToNext()) {
+                        String date=resfhr.getString(5);
+                        if (isDateExpired(date))
+                        {
+                            myDb.updatefhraddress(deviceaddress+":000","5");
+                            //String crashString = null;
+                            //int length = crashString.length();
+                        }
+                       /* if (resfhr.getString(4).equals("2"))
+                        {
 
 
-        getLocation(devicename,deviceaddress);
+                        }*/
+
+
+                    }
+                } finally {
+                    resfhr.close();
+                }
+            }
+        }
+        if (myDb.getAllDataBP().getCount()>0) {
+            resbp = myDb.getAllDataBP();
+            if (resbp.getCount() > 0) {
+                try {
+                    while (resbp.moveToNext()) {
+                        if (resbp.getString(4).equals("2"))
+                        {
+                            String date=resfhr.getString(5);
+                            if (isDateExpired(date))
+                            {
+                                myDb.updatebpaddress(deviceaddress+":00","2");
+
+                            }
+                        }
+
+                    }
+                } finally {
+
+                    resbp.close();
+                }
+            }
+        }
+        if (myDb.getAllDataWeight().getCount()>0) {
+
+            resweight = myDb.getAllDataWeight();
+            if (resweight.getCount() > 0) {
+
+                try {
+                    while (resweight.moveToNext()) {
+                        if (resweight.getString(4).equals("2"))
+                        {
+                            String date=resfhr.getString(5);
+                            if (isDateExpired(date))
+                            {
+                                myDb.updateweightaddress(deviceaddress+":00","1");
+
+                            }
+                        }
+
+                    }
+                } finally {
+
+                    resweight.close();
+                }
+            }
+        }
+        if (myDb.getAllDataHG().getCount()>0) {
+
+            reshb = myDb.getAllDataHG();
+            if (reshb.getCount() > 0) {
+                try {
+                    while (reshb.moveToNext()) {
+                        if (reshb.getString(4).equals("2"))
+                        {
+                            String date=resfhr.getString(5);
+                            if (isDateExpired(date))
+                            {
+                                myDb.updatehgaddress(deviceaddress+":00","3");
+
+                            }
+                        }
+                    }
+                } finally {
+
+                    reshb.close();
+                }
+
+            }
+        }
+// glucose code
+        if (myDb.getAllDataGlucose().getCount()>0) {
+
+            resglucose = myDb.getAllDataGlucose();
+            if (resglucose.getCount() > 0) {
+                try {
+                    while (resglucose.moveToNext()) {
+                        System.out.println("resglucose" + resglucose.getString(2));
+                        if (resglucose.getString(4).equals("2"))
+                        {
+                            String date=resfhr.getString(5);
+                            if (isDateExpired(date))
+                            {
+                                myDb.updateglucoseaddress(deviceaddress+":00","4");
+                            }
+                        }
+
+                    }
+                } finally {
+
+                    resglucose.close();
+                }
+
+            }
+        }
+
 
     }
 
@@ -658,7 +746,7 @@ public class MedtelScan extends AppCompatActivity {
                 if (!deviceaddress.isEmpty() || !deviceaddress.equals("")) {
                     jsonArray.put(jsonObject);
                 }
-                devicelistsend(latitude, longitude);
+
 
                 // Use latitude and longitude
                 // Do something with latitude and longitude values
@@ -677,45 +765,18 @@ public class MedtelScan extends AppCompatActivity {
         }
     }
 
-    public void devicelistsend(double latitude, double longitude) {
+    public static boolean isDateExpired(String dateStr) {
+        try {
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+            Date targetDate = sdf.parse(dateStr);
+            Date currentDate = new Date(); // Get the current date
 
-        OkHttpClient client = new OkHttpClient();
-        Log.d("JsonObject",jsonArray.toString());
-        if (jsonArray.length()!=0) {
-            FormBody.Builder formBuilder = new FormBody.Builder();
-            formBuilder.add("raw", jsonArray.toString());
-
-
-            RequestBody requestBody = formBuilder.build();
-
-            Request request = new Request.Builder()
-                    .url(Constants.DEVICEURLSUCCESS)
-                    .post(requestBody)
-                    .build();
-
-            client.newCall(request).enqueue(new Callback() {
-                @Override
-                public void onFailure(Call call, IOException e) {
-                    e.printStackTrace();
-                    // Handle request failure
-                }
-
-                @Override
-                public void onResponse(Call call, Response response) throws IOException {
-
-                    if (response.isSuccessful()) {
-                        String jsonString = response.body().string();
-                        System.out.println("jsonstring" + jsonString);
-                        Log.d("Success3", jsonString + "||" + requestBody.toString());
-
-                    } else {
-                        // Handle request failure
-                    }
-                }
-            });
+            // Compare the target date with the current date
+            return currentDate.after(targetDate);
+        } catch (ParseException e) {
+            e.printStackTrace();
+            return false; // Handle the parsing error as needed
         }
     }
-
-
 
 }

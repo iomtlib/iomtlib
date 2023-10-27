@@ -5,7 +5,9 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,6 +24,9 @@ public class DeviceTable extends SQLiteOpenHelper {
     public static final String  RSSI="RSSI";
     public static final String  DEVICETYPE="DEVICETYPE";
     public static final String DEVICESTATUS="DEVICESTATUS";
+    public static final String DEVICEMETHOD="DEVICEMETHOD";
+    public static final String DEVICEDATE="DEVICEDATE";
+
 
     public  static final String MEDTELFHRTABLE="medtelfhrtable";
     public static final  String MEDTELBPTABLE="medtelbptable";
@@ -36,11 +41,11 @@ public class DeviceTable extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table " + TABLE_NAMEFHR + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,DEVICE_NAME TEXT, DEVICE_ID TEXT,DEVICESTATUS TEXT)");
-        db.execSQL("create table " + TABLE_NAMEBP + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,DEVICE_NAME TEXT, DEVICE_ID TEXT,DEVICESTATUS TEXT)");
-        db.execSQL("create table " + TABLE_NAMEHG + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,DEVICE_NAME TEXT, DEVICE_ID TEXT,DEVICESTATUS TEXT)");
-        db.execSQL("create table " + TABLE_NAMEWEIGHT + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,DEVICE_NAME TEXT, DEVICE_ID TEXT,DEVICESTATUS TEXT)");
-        db.execSQL("create table " + TABLE_NAMEGLUCOSE + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,DEVICE_NAME TEXT, DEVICE_ID TEXT,DEVICESTATUS TEXT)");
+        db.execSQL("create table " + TABLE_NAMEFHR + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,DEVICE_NAME TEXT, DEVICE_ID TEXT,DEVICESTATUS TEXT,DEVICEMETHOD TEXT,DEVICEDATE TEXT)");
+        db.execSQL("create table " + TABLE_NAMEBP + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,DEVICE_NAME TEXT, DEVICE_ID TEXT,DEVICESTATUS TEXT,DEVICEMETHOD TEXT,DEVICEDATE TEXT)");
+        db.execSQL("create table " + TABLE_NAMEHG + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,DEVICE_NAME TEXT, DEVICE_ID TEXT,DEVICESTATUS TEXT,DEVICEMETHOD TEXT,DEVICEDATE TEXT)");
+        db.execSQL("create table " + TABLE_NAMEWEIGHT + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,DEVICE_NAME TEXT, DEVICE_ID TEXT,DEVICESTATUS TEXT,DEVICEMETHOD TEXT,DEVICEDATE TEXT)");
+        db.execSQL("create table " + TABLE_NAMEGLUCOSE + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,DEVICE_NAME TEXT, DEVICE_ID TEXT,DEVICESTATUS TEXT,DEVICEMETHOD TEXT,DEVICEDATE TEXT)");
 
 
         db.execSQL("create table " + MEDTELFHRTABLE + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,DEVICE_NAME TEXT, DEVICE_ID TEXT)");
@@ -81,61 +86,87 @@ public class DeviceTable extends SQLiteOpenHelper {
 
 
 
-    public boolean insertfhr(String devicename, String deviceid,String devicestatus) {
+    public boolean insertfhr(String devicename, String deviceid,String devicestatus,String devicemethod) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(DEVICE_NAME, devicename);
         contentValues.put(DEVICE_ID,deviceid);
         contentValues.put(DEVICESTATUS,devicestatus);
+        contentValues.put(DEVICEMETHOD,devicemethod);
+        contentValues.put(DEVICEDATE,"2024-01-30");
+       /* if (devicemethod.equals("2")) {
+            LocalDate currentDate = null;
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+                currentDate = LocalDate.now();
+                LocalDate dateIn40Days = currentDate.plusDays(45);
+
+                contentValues.put(DEVICEDATE, dateIn40Days.toString());
+            }
+
+// Add 40 days to the current date
+
+        }else
+        {
+            contentValues.put(DEVICEDATE, "");
+        }*/
+
         long result = db.insert(TABLE_NAMEFHR, null, contentValues);
         if (result == -1)
             return false;
         else
             return true;
     }
-    public boolean insertbp(String devicename, String deviceid,String devicestatus) {
+    public boolean insertbp(String devicename, String deviceid,String devicestatus,String devicemethod) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(DEVICE_NAME, devicename);
         contentValues.put(DEVICE_ID,deviceid);
         contentValues.put(DEVICESTATUS,devicestatus);
+        contentValues.put(DEVICEMETHOD,devicemethod);
+        contentValues.put(DEVICEDATE,"2024-01-30");
         long result = db.insert(TABLE_NAMEBP, null, contentValues);
         if (result == -1)
             return false;
         else
             return true;
     }
-    public boolean inserthg(String devicename, String deviceid,String devicestatus) {
+    public boolean inserthg(String devicename, String deviceid,String devicestatus,String devicemethod) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(DEVICE_NAME, devicename);
         contentValues.put(DEVICE_ID,deviceid);
         contentValues.put(DEVICESTATUS,devicestatus);
+        contentValues.put(DEVICEMETHOD,devicemethod);
+        contentValues.put(DEVICEDATE,"2024-01-30");
         long result = db.insert(TABLE_NAMEHG, null, contentValues);
         if (result == -1)
             return false;
         else
             return true;
     }
-    public boolean insertweight(String devicename, String deviceid,String devicestatus) {
+    public boolean insertweight(String devicename, String deviceid,String devicestatus,String devicemethod) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(DEVICE_NAME, devicename);
         contentValues.put(DEVICE_ID,deviceid);
         contentValues.put(DEVICESTATUS,devicestatus);
-
+        contentValues.put(DEVICEMETHOD,devicemethod);
+        contentValues.put(DEVICEDATE,"2024-01-30");
         long result = db.insert(TABLE_NAMEWEIGHT, null, contentValues);
         if (result == -1)
             return false;
         else
             return true;
     }
-    public boolean insertglucose(String devicename, String deviceid,String  devicestatus) {
+    public boolean insertglucose(String devicename, String deviceid,String  devicestatus,String devicemethod) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(DEVICE_NAME, devicename);
         contentValues.put(DEVICE_ID,deviceid);
         contentValues.put(DEVICESTATUS,devicestatus);
+        contentValues.put(DEVICEMETHOD,devicemethod);
+
+        contentValues.put(DEVICEDATE,"2024-01-30");
 
         long result = db.insert(TABLE_NAMEGLUCOSE, null, contentValues);
         if (result == -1)
@@ -146,13 +177,81 @@ public class DeviceTable extends SQLiteOpenHelper {
 
 
 
-    public boolean updatefhr(String deviceid,String devicename,String devicestatus) {
+    public boolean updatefhr(String deviceid,String devicename,String devicestatus,String devicemethod) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         // contentValues.put(ID, id);
 
         contentValues.put(DEVICE_ID, deviceid);
         contentValues.put(DEVICE_NAME,devicename);
+        contentValues.put(DEVICEMETHOD,devicemethod);
+        contentValues.put(DEVICEDATE,"2024-01-30");
+
+        db.update(TABLE_NAMEFHR, contentValues, "DEVICESTATUS = ?", new String[]{devicestatus});
+        return true;
+    }
+
+    public boolean updatebp(String deviceid,String devicename,String devicestatus,String  devicemethod) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        // contentValues.put(ID, id);
+
+        contentValues.put(DEVICE_ID, deviceid);
+        contentValues.put(DEVICE_NAME,devicename);
+        contentValues.put(DEVICEMETHOD,devicemethod);
+        contentValues.put(DEVICEDATE,"2024-01-30");
+
+        db.update(TABLE_NAMEBP, contentValues, "DEVICESTATUS = ?", new String[]{devicestatus});
+        return true;
+    }
+
+    public boolean updateHG(String deviceid,String devicename,String devicestatus,String devicemethod) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        // contentValues.put(ID, id);
+
+        contentValues.put(DEVICE_ID, deviceid);
+        contentValues.put(DEVICE_NAME,devicename);
+        contentValues.put(DEVICEMETHOD,devicemethod);
+        contentValues.put(DEVICEDATE,"2024-01-30");
+        db.update(TABLE_NAMEHG, contentValues, "DEVICESTATUS = ?", new String[]{devicestatus});
+        return true;
+    }
+
+    public boolean updateweight(String deviceid,String devicename,String devicestatus,String devicemethod) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        // contentValues.put(ID, id);
+
+        contentValues.put(DEVICE_ID, deviceid);
+        contentValues.put(DEVICE_NAME,devicename);
+        contentValues.put(DEVICEMETHOD,devicemethod);
+        contentValues.put(DEVICEDATE,"2024-01-30");
+        db.update(TABLE_NAMEWEIGHT, contentValues, "DEVICESTATUS = ?", new String[]{devicestatus});
+        return true;
+    }
+
+    public boolean updateglucose(String deviceid,String devicename,String devicestatus,String devicemethod) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        // contentValues.put(ID, id);
+
+        contentValues.put(DEVICE_ID, deviceid);
+        contentValues.put(DEVICE_NAME,devicename);
+        contentValues.put(DEVICEMETHOD,devicemethod);
+        contentValues.put(DEVICEDATE,"2024-01-30");
+        db.update(TABLE_NAMEGLUCOSE, contentValues, "DEVICESTATUS = ?", new String[]{devicestatus});
+        return true;
+    }
+
+
+
+    public boolean updatefhraddress(String deviceid,String devicestatus) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        // contentValues.put(ID, id);
+
+        contentValues.put(DEVICE_ID, deviceid);
 
 
 
@@ -160,13 +259,12 @@ public class DeviceTable extends SQLiteOpenHelper {
         return true;
     }
 
-    public boolean updatebp(String deviceid,String devicename,String devicestatus) {
+    public boolean updatebpaddress(String deviceid,String devicestatus) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         // contentValues.put(ID, id);
 
         contentValues.put(DEVICE_ID, deviceid);
-        contentValues.put(DEVICE_NAME,devicename);
 
 
 
@@ -174,45 +272,43 @@ public class DeviceTable extends SQLiteOpenHelper {
         return true;
     }
 
-    public boolean updateHG(String deviceid,String devicename,String devicestatus) {
+    public boolean updatehgaddress(String deviceid,String devicestatus) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         // contentValues.put(ID, id);
 
         contentValues.put(DEVICE_ID, deviceid);
-        contentValues.put(DEVICE_NAME,devicename);
+
 
 
         db.update(TABLE_NAMEHG, contentValues, "DEVICESTATUS = ?", new String[]{devicestatus});
         return true;
     }
-
-    public boolean updateweight(String deviceid,String devicename,String devicestatus) {
+    public boolean updateweightaddress(String deviceid,String devicestatus) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         // contentValues.put(ID, id);
 
         contentValues.put(DEVICE_ID, deviceid);
-        contentValues.put(DEVICE_NAME,devicename);
+
 
 
         db.update(TABLE_NAMEWEIGHT, contentValues, "DEVICESTATUS = ?", new String[]{devicestatus});
         return true;
     }
 
-    public boolean updateglucose(String deviceid,String devicename,String devicestatus) {
+    public boolean updateglucoseaddress(String deviceid,String devicestatus) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         // contentValues.put(ID, id);
 
         contentValues.put(DEVICE_ID, deviceid);
-        contentValues.put(DEVICE_NAME,devicename);
+
+
 
         db.update(TABLE_NAMEGLUCOSE, contentValues, "DEVICESTATUS = ?", new String[]{devicestatus});
         return true;
     }
-
-
     public boolean insertmedtelfhr(String devicename, String deviceid) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();

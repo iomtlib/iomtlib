@@ -7,14 +7,17 @@ public class BluetoothData {
     public String address,devicename,rssi;
    public BleDevice bleDevice;
    String devicetype="";
+   String methoddata="";
 
 
-    public BluetoothData(String devicename,String address,String rssi,BleDevice bleDevice,String devicetype) {
+
+    public BluetoothData(String devicename,String address,String rssi,BleDevice bleDevice,String devicetype,String methoddata) {
       this.devicename=devicename;
       this.address=address;
       this.rssi=rssi;
       this.bleDevice=bleDevice;
       this.devicetype=devicetype;
+      this.methoddata=methoddata;
 
 
     }
@@ -59,6 +62,14 @@ public class BluetoothData {
     public void setDevicetype(String devicetype)
     {
         this.devicetype=devicetype;
+    }
+    public String getMethoddata()
+    {
+        return methoddata;
+    }
+    public void setMethoddata(String methoddata)
+    {
+        this.methoddata=methoddata;
     }
 
 }

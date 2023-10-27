@@ -74,7 +74,5 @@ public class Constants {
 
   //public static final String DEVICEURL="https://5f5be514-8387-4c91-9a2f-868ee4744c94.mock.pstmn.io/medteldevicelist";
 
-    public static final String DEVICEURL="https://thp.medtel.in/Macid/getMacIds";
-    public static final String DEVICEURLSUCCESS="https://thp.medtel.in/App/getJhpiegoData";
 
 }

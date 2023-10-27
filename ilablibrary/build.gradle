@@ -6,7 +6,7 @@ android {
     namespace 'medtel.in.medtelilab.ilablibrary'
 
     defaultConfig {
-        minSdkVersion 21
+        minSdkVersion 22
         targetSdkVersion 33
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -28,7 +28,7 @@ afterEvaluate {
         publications {
 // Creates a Maven publication called "release".
             release(MavenPublication) {
-                from components.release
+                from components.findByName('release')
                 groupId = 'com.github.maheshlingam20'
                 artifactId = 'ilablibrary'
                 version = '1.2'
@@ -41,9 +41,9 @@ dependencies {
     androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.core:core-ktx:1.12.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'com.google.android.material:material:1.10.0'
     implementation 'com.squareup.okhttp3:okhttp:4.9.3'
     implementation 'com.squareup.okhttp3:logging-interceptor:4.9.3'
 
