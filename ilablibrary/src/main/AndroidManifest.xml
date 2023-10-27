@@ -39,8 +39,39 @@
         <service
             android:name=".BluetoothLeService"
             android:enabled="true" />
+    <activity android:name=".MedtelScan"
+        android:exported="true"></activity>
 
-
+    <activity android:name=".Urion.BleFragmentActivity"
+        android:exported="true"></activity>
+        <activity android:name=".Urion.DeviceListActivity"
+            android:exported="true"></activity>
+        <activity android:name=".BMI.Config"
+            android:exported="true"></activity>
+        <activity android:name=".BMI.User"
+            android:exported="true"></activity>
+        <activity android:name=".BMI.UserConst"
+            android:exported="true"></activity>
+        <activity android:name=".BluetoothData"
+            android:exported="true"></activity>
+        <activity android:name=".Constants"
+            android:exported="true"></activity>
+        <activity android:name=".ReadDevices"
+            android:exported="true"></activity>
+        <activity android:name=".StringUtils"
+            android:exported="true"></activity>
+        <activity android:name=".FHR.bluetooth.BleBluetooth"
+            android:exported="true"></activity>
+        <activity android:name=".FHR.bluetooth.BleConnector"
+            android:exported="true"></activity>
+        <activity android:name=".FHR.bluetooth.MultipleBluetoothController"
+            android:exported="true"></activity>
+        <activity android:name=".FHR.bluetooth.SplitWriter"
+            android:exported="true"></activity>
+        <activity android:name=".HB.BluetoothUtils"
+            android:exported="true"></activity>
+        <activity android:name=".HB.GattClientCallback"
+            android:exported="true"></activity>
     </application>
 
 </manifest>
