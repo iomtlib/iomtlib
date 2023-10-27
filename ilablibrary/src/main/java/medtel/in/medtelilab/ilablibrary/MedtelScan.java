@@ -107,6 +107,7 @@ public class MedtelScan extends AppCompatActivity {
     }
     public void initalize(Activity activity)
     {
+        myDb = new DeviceTable(activity, 2);
         locationManager = (LocationManager) activity.getSystemService(LOCATION_SERVICE);
         jsonArray=new JSONArray();
         jsonObject=new JSONObject();
@@ -597,7 +598,7 @@ public class MedtelScan extends AppCompatActivity {
     public void Glucosedeviceperformrefresh(String devicename,String deviceaddress)
 
     {
-        myDb = new DeviceTable(this, 1);
+
         Cursor resfhr = null,resbp=null,resweight=null,reshb=null,resglucose=null;
 
        // getLocation(devicename,deviceaddress);
