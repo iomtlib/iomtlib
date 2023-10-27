@@ -53,8 +53,6 @@ public class Constants {
     public final static String BLOOD_GLUCOSE_SYNC_DEVICE_ID = "Sync";
     public final static String ECG_DEVICE_ID = "Checkme";
 
-
-
     public final static String BLOOD_PRESSURE_DEVICE_ID_FULL = "HL158HCBLE";
     public final static String BLOOD_GLUCOSE_DEVICE_ID_FULL = "HL568HCBLE";
 
