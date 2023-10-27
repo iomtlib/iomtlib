@@ -520,15 +520,16 @@ public class MedtelScan extends AppCompatActivity {
                         if (result.getDevice().getName()==null && result.getDevice().getAddress()!=null)
 
                         {
-                            if (result.getDevice().getAddress().substring(0,5).contains("ED:67") || result.getDevice().getAddress().substring(0,5).contains("02:E6") || result.getDevice().getAddress().substring(0,5).contains("25:ED") || result.getDevice().getAddress().substring(0,5).contains("2C:AB"))
-                            deviceidlist.add(result.getDevice().getAddress());
-                            devicenamelist.add("scale");
-                            devicerssilist.add(String.valueOf(rssi));
-                            devicetypelist.add("1");
-                            devicemethodlist.add("2");
-                            mMacIdList.add(new BluetoothData("scale", result.getDevice().getAddress(), String.valueOf(rssi), bledevice, "1","2"));
+                            if (result.getDevice().getAddress().substring(0,5).contains("ED:67") || result.getDevice().getAddress().substring(0,5).contains("02:E6") || result.getDevice().getAddress().substring(0,5).contains("25:ED") || result.getDevice().getAddress().substring(0,5).contains("2C:AB")) {
+                                deviceidlist.add(result.getDevice().getAddress());
+                                devicenamelist.add("scale");
+                                devicerssilist.add(String.valueOf(rssi));
+                                devicetypelist.add("1");
+                                devicemethodlist.add("2");
+                                mMacIdList.add(new BluetoothData("scale", result.getDevice().getAddress(), String.valueOf(rssi), bledevice, "1", "2"));
 
-                            Log.d("Weights",result.getDevice().getAddress()+"||"+"Scale"+"||"+result.getDevice().getAddress().substring(0,5));
+                                Log.d("Weights", result.getDevice().getAddress() + "||" + "Scale" + "||" + result.getDevice().getAddress().substring(0, 5));
+                            }
                         }
 
                     }
