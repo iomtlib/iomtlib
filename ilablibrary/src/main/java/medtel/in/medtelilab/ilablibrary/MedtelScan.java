@@ -107,7 +107,7 @@ public class MedtelScan extends AppCompatActivity {
     }
     public void initalize(Activity activity)
     {
-        myDb = new DeviceTable(activity, 2);
+        myDb = new DeviceTable(activity, 1);
         locationManager = (LocationManager) activity.getSystemService(LOCATION_SERVICE);
         jsonArray=new JSONArray();
         jsonObject=new JSONObject();
@@ -595,12 +595,13 @@ public class MedtelScan extends AppCompatActivity {
         return json;
     }
 
-    public void Glucosedeviceperformrefresh(String devicename,String deviceaddress)
+    public void Glucosedeviceperformrefresh(String devicename,String deviceaddress,Activity activity)
 
     {
-
+        DeviceTable myDb;
+        myDb = new DeviceTable(activity, 1);
         Cursor resfhr = null,resbp=null,resweight=null,reshb=null,resglucose=null;
-
+        Log.d("Devicevalues",String.valueOf(myDb.getAllDataFHR().getCount())+"||"+String.valueOf(myDb.getAllDataBP().getCount())+"||"+String.valueOf(myDb.getAllDataHG().getCount())+"||"+String.valueOf(myDb.getAllDataGlucose().getCount())+"||"+String.valueOf(myDb.getAllDataWeight().getCount()));
        // getLocation(devicename,deviceaddress);
         if (myDb.getAllDataFHR().getCount()>0) {
             resfhr = myDb.getAllDataFHR();
@@ -614,12 +615,6 @@ public class MedtelScan extends AppCompatActivity {
                             //String crashString = null;
                             //int length = crashString.length();
                         }
-                       /* if (resfhr.getString(4).equals("2"))
-                        {
-
-
-                        }*/
-
 
                     }
                 } finally {
@@ -634,7 +629,7 @@ public class MedtelScan extends AppCompatActivity {
                     while (resbp.moveToNext()) {
                         if (resbp.getString(4).equals("2"))
                         {
-                            String date=resfhr.getString(5);
+                            String date=resbp.getString(5);
                             if (isDateExpired(date))
                             {
                                 myDb.updatebpaddress(deviceaddress+":00","2");
@@ -656,9 +651,10 @@ public class MedtelScan extends AppCompatActivity {
 
                 try {
                     while (resweight.moveToNext()) {
+
                         if (resweight.getString(4).equals("2"))
                         {
-                            String date=resfhr.getString(5);
+                            String date=resweight.getString(5);
                             if (isDateExpired(date))
                             {
                                 myDb.updateweightaddress(deviceaddress+":00","1");
@@ -681,7 +677,7 @@ public class MedtelScan extends AppCompatActivity {
                     while (reshb.moveToNext()) {
                         if (reshb.getString(4).equals("2"))
                         {
-                            String date=resfhr.getString(5);
+                            String date=reshb.getString(5);
                             if (isDateExpired(date))
                             {
                                 myDb.updatehgaddress(deviceaddress+":00","3");
@@ -706,7 +702,7 @@ public class MedtelScan extends AppCompatActivity {
                         System.out.println("resglucose" + resglucose.getString(2));
                         if (resglucose.getString(4).equals("2"))
                         {
-                            String date=resfhr.getString(5);
+                            String date=resglucose.getString(5);
                             if (isDateExpired(date))
                             {
                                 myDb.updateglucoseaddress(deviceaddress+":00","4");
