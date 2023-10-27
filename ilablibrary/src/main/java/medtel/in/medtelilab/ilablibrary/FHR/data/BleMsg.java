@@ -56,5 +56,4 @@ public class BleMsg {
     public static final String KEY_SET_MTU_BUNDLE_VALUE = "mtu_value";
 
 
-
 }
