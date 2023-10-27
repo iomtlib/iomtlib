@@ -743,8 +743,6 @@ public class MedtelScan extends AppCompatActivity {
                 if (!deviceaddress.isEmpty() || !deviceaddress.equals("")) {
                     jsonArray.put(jsonObject);
                 }
-
-
                 // Use latitude and longitude
                 // Do something with latitude and longitude values
             }
