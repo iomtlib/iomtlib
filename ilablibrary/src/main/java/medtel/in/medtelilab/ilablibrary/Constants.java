@@ -10,7 +10,6 @@ public class Constants {
     public static String SERVICE_STRING  = "D973F2E0-B19E-11E2-9E96-0800200C9A66";
 
     public static UUID SERVICE_UUID = UUID.fromString(SERVICE_STRING);
-
     //public static String CHARACTERISTIC_ECHO_STRING = "7D2EBAAD-F7BD-485A-BD9D-92AD6ECFE93E";
     //my device rx
     public static String CHARACTERISTIC_ECHO_STRING = "D973F2E2-B19E-11E2-9E96-0800200C9A66";
