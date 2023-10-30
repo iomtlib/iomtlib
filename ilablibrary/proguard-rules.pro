@@ -19,3 +19,27 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+-keep public class * extends java.lang.Exception
+-dontobfuscate
+-keep class org.sqlite.** { *; }
+-keep class org.sqlite.database.** { *; }
+-keepclassmembers class **.R$* {
+public static <fields>;}
+-dontwarn org.**
+-dontwarn com.**
+-dontwarn java.**
+-dontwarn javax.**
+-dontwarn sun.**
+-keep class android.** { *; }
+-keep class org.** { *; }
+-keep class java.** { *; }
+-keep class javax.** { *; }
+-keep class sun.** { *; }
+-keep class de.mindpipe.** { *; }
+-keep class com.j256.** { *; }
+-keep class org.json.** { *; }
+-keepclassmembers class * {
+    @android.webkit.JavascriptInterface <methods>;
+}
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.Urion.BleFragmentActivity
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.Urion.DeviceListActivity
