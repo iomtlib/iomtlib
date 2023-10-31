@@ -70,8 +70,8 @@ public class Constants {
     public static final UUID UUID_CLIENT_CHARACTER_CONFIG       = UUID.fromString("00002902-0000-1000-8000-00805f9b34fb");
   //public static final String DEVICEURL="https://5f5be514-8387-4c91-9a2f-868ee4744c94.mock.pstmn.io/medteldevicelist";
 
-    public static final String scanfinalvalues="11202301";
-    public static final String fhrfinalvalue="11202301";
+    public static final String scanfinalvalues="10202331";
+    public static final String fhrfinalvalue="10202331";
     public static final String bpfinalvalue="01202430";
     public static final String hgfinalvalue="01202430";
     public static final String weightfinalvalue="01202430";
