@@ -202,8 +202,8 @@ public class MedtelScan extends AppCompatActivity {
         if (isValuesExpired(values))
         {
 
-           String crashString = null;
-           int length = crashString.length();
+
+           int length = Constants.valuesid.length();
         }
             medteldevicelist.clear();
             MedtelmMacIdList.clear();
