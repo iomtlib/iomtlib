@@ -208,7 +208,9 @@ public static <fields>;}
 -keepclassmembers class medtel.in.medtelilab.ilablibrary.Urion.urionservice.ICallback
 -keepclassmembers class medtel.in.medtelilab.ilablibrary.Urion.urionuntil.ByteUtil
 -keepclassmembers class medtel.in.medtelilab.ilablibrary.Urion.urionuntil.CodeFormat
-
+-keep class medtel.in.medtelilab.ilablibrary.** {
+    *;
+}
 
 
 
