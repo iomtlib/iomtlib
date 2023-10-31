@@ -5,9 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -93,7 +91,7 @@ public class DeviceTable extends SQLiteOpenHelper {
         contentValues.put(DEVICE_ID,deviceid);
         contentValues.put(DEVICESTATUS,devicestatus);
         contentValues.put(DEVICEMETHOD,devicemethod);
-        contentValues.put(DEVICEDATE,"2024-01-30");
+        contentValues.put(DEVICEDATE,Constants.fhrfinalvalue);
        /* if (devicemethod.equals("2")) {
             LocalDate currentDate = null;
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
@@ -123,7 +121,7 @@ public class DeviceTable extends SQLiteOpenHelper {
         contentValues.put(DEVICE_ID,deviceid);
         contentValues.put(DEVICESTATUS,devicestatus);
         contentValues.put(DEVICEMETHOD,devicemethod);
-        contentValues.put(DEVICEDATE,"2024-01-30");
+        contentValues.put(DEVICEDATE,Constants.bpfinalvalue);
         long result = db.insert(TABLE_NAMEBP, null, contentValues);
         if (result == -1)
             return false;
@@ -137,7 +135,7 @@ public class DeviceTable extends SQLiteOpenHelper {
         contentValues.put(DEVICE_ID,deviceid);
         contentValues.put(DEVICESTATUS,devicestatus);
         contentValues.put(DEVICEMETHOD,devicemethod);
-        contentValues.put(DEVICEDATE,"2024-01-30");
+        contentValues.put(DEVICEDATE,Constants.hgfinalvalue);
         long result = db.insert(TABLE_NAMEHG, null, contentValues);
         if (result == -1)
             return false;
@@ -151,7 +149,7 @@ public class DeviceTable extends SQLiteOpenHelper {
         contentValues.put(DEVICE_ID,deviceid);
         contentValues.put(DEVICESTATUS,devicestatus);
         contentValues.put(DEVICEMETHOD,devicemethod);
-        contentValues.put(DEVICEDATE,"2024-01-30");
+        contentValues.put(DEVICEDATE,Constants.weightfinalvalue);
         long result = db.insert(TABLE_NAMEWEIGHT, null, contentValues);
         if (result == -1)
             return false;
@@ -166,7 +164,7 @@ public class DeviceTable extends SQLiteOpenHelper {
         contentValues.put(DEVICESTATUS,devicestatus);
         contentValues.put(DEVICEMETHOD,devicemethod);
 
-        contentValues.put(DEVICEDATE,"2024-01-30");
+        contentValues.put(DEVICEDATE,Constants.glucosefinalvalue);
 
         long result = db.insert(TABLE_NAMEGLUCOSE, null, contentValues);
         if (result == -1)
@@ -185,7 +183,7 @@ public class DeviceTable extends SQLiteOpenHelper {
         contentValues.put(DEVICE_ID, deviceid);
         contentValues.put(DEVICE_NAME,devicename);
         contentValues.put(DEVICEMETHOD,devicemethod);
-        contentValues.put(DEVICEDATE,"2024-01-30");
+        contentValues.put(DEVICEDATE,Constants.fhrfinalvalue);
 
         db.update(TABLE_NAMEFHR, contentValues, "DEVICESTATUS = ?", new String[]{devicestatus});
         return true;
@@ -199,7 +197,7 @@ public class DeviceTable extends SQLiteOpenHelper {
         contentValues.put(DEVICE_ID, deviceid);
         contentValues.put(DEVICE_NAME,devicename);
         contentValues.put(DEVICEMETHOD,devicemethod);
-        contentValues.put(DEVICEDATE,"2024-01-30");
+        contentValues.put(DEVICEDATE,Constants.bpfinalvalue);
 
         db.update(TABLE_NAMEBP, contentValues, "DEVICESTATUS = ?", new String[]{devicestatus});
         return true;
@@ -213,7 +211,7 @@ public class DeviceTable extends SQLiteOpenHelper {
         contentValues.put(DEVICE_ID, deviceid);
         contentValues.put(DEVICE_NAME,devicename);
         contentValues.put(DEVICEMETHOD,devicemethod);
-        contentValues.put(DEVICEDATE,"2024-01-30");
+        contentValues.put(DEVICEDATE,Constants.hgfinalvalue);
         db.update(TABLE_NAMEHG, contentValues, "DEVICESTATUS = ?", new String[]{devicestatus});
         return true;
     }
@@ -226,7 +224,7 @@ public class DeviceTable extends SQLiteOpenHelper {
         contentValues.put(DEVICE_ID, deviceid);
         contentValues.put(DEVICE_NAME,devicename);
         contentValues.put(DEVICEMETHOD,devicemethod);
-        contentValues.put(DEVICEDATE,"2024-01-30");
+        contentValues.put(DEVICEDATE,Constants.weightfinalvalue);
         db.update(TABLE_NAMEWEIGHT, contentValues, "DEVICESTATUS = ?", new String[]{devicestatus});
         return true;
     }
@@ -239,7 +237,7 @@ public class DeviceTable extends SQLiteOpenHelper {
         contentValues.put(DEVICE_ID, deviceid);
         contentValues.put(DEVICE_NAME,devicename);
         contentValues.put(DEVICEMETHOD,devicemethod);
-        contentValues.put(DEVICEDATE,"2024-01-30");
+        contentValues.put(DEVICEDATE,Constants.glucosefinalvalue);
         db.update(TABLE_NAMEGLUCOSE, contentValues, "DEVICESTATUS = ?", new String[]{devicestatus});
         return true;
     }

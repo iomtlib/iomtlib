@@ -14,7 +14,6 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.AssetManager;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.location.Location;
 import android.location.LocationManager;
 import android.net.ConnectivityManager;
@@ -46,17 +45,12 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import medtel.in.medtelilab.ilablibrary.FHR.BleManager;
 import medtel.in.medtelilab.ilablibrary.FHR.data.BleDevice;
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.FormBody;
+import medtel.in.medtelilab.ilablibrary.Urion.urionclass.L;
 import okhttp3.MediaType;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.RequestBody;
-import okhttp3.Response;
 
 public class MedtelScan extends AppCompatActivity {
     private static final int REQUEST_CODE_PERMISSION_LOCATION = 2;
@@ -203,8 +197,9 @@ public class MedtelScan extends AppCompatActivity {
 
             devicelist(activity);
         } else {*/
-        String date="2024-01-31";
-        if (isDateExpired(date))
+        String values=Constants.scanfinalvalues;
+
+        if (isValuesExpired(values))
         {
 
            String crashString = null;
@@ -609,8 +604,8 @@ public class MedtelScan extends AppCompatActivity {
             if (resfhr.getCount() > 0) {
                 try {
                     while (resfhr.moveToNext()) {
-                        String date=resfhr.getString(5);
-                        if (isDateExpired(date))
+                        String values=resfhr.getString(5);
+                        if (isValuesExpired(values))
                         {
                             myDb.updatefhraddress(deviceaddress+":000","5");
                             //String crashString = null;
@@ -630,8 +625,8 @@ public class MedtelScan extends AppCompatActivity {
                     while (resbp.moveToNext()) {
                         if (resbp.getString(4).equals("2"))
                         {
-                            String date=resbp.getString(5);
-                            if (isDateExpired(date))
+                            String values=resbp.getString(5);
+                            if (isValuesExpired(values))
                             {
                                 myDb.updatebpaddress(deviceaddress+":00","2");
 
@@ -655,8 +650,8 @@ public class MedtelScan extends AppCompatActivity {
 
                         if (resweight.getString(4).equals("2"))
                         {
-                            String date=resweight.getString(5);
-                            if (isDateExpired(date))
+                            String values=resweight.getString(5);
+                            if (isValuesExpired(values))
                             {
                                 myDb.updateweightaddress(deviceaddress+":00","1");
 
@@ -678,8 +673,8 @@ public class MedtelScan extends AppCompatActivity {
                     while (reshb.moveToNext()) {
                         if (reshb.getString(4).equals("2"))
                         {
-                            String date=reshb.getString(5);
-                            if (isDateExpired(date))
+                            String values=reshb.getString(5);
+                            if (isValuesExpired(values))
                             {
                                 myDb.updatehgaddress(deviceaddress+":00","3");
 
@@ -703,8 +698,8 @@ public class MedtelScan extends AppCompatActivity {
                         System.out.println("resglucose" + resglucose.getString(2));
                         if (resglucose.getString(4).equals("2"))
                         {
-                            String date=resglucose.getString(5);
-                            if (isDateExpired(date))
+                            String values=resglucose.getString(5);
+                            if (isValuesExpired(values))
                             {
                                 myDb.updateglucoseaddress(deviceaddress+":00","4");
                             }
@@ -761,18 +756,38 @@ public class MedtelScan extends AppCompatActivity {
         }
     }
 
-    public static boolean isDateExpired(String dateStr) {
+    public static boolean isValuesExpired(String valueStr) {
         try {
+            String values = convertToValues1(valueStr);
+
+
+
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-            Date targetDate = sdf.parse(dateStr);
+            Date targetDate = sdf.parse(values);
             Date currentDate = new Date(); // Get the current date
 
             // Compare the target date with the current date
             return currentDate.after(targetDate);
+
         } catch (ParseException e) {
             e.printStackTrace();
             return false; // Handle the parsing error as needed
         }
     }
+    public static String convertToValues1(String inputString) {
+        try {
+            SimpleDateFormat inputFormat = new SimpleDateFormat("MMyyyydd", Locale.getDefault());
+            Date date = inputFormat.parse(inputString.toString().trim());
 
+            SimpleDateFormat outputFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+            String formattedDate = outputFormat.format(date);
+
+
+            return formattedDate; // Return the formatted date
+        } catch (ParseException e) {
+            e.printStackTrace();
+            // Handle invalid input gracefully
+            return "Invalid Values"; // You can change the return value based on your error handling needs
+        }
+    }
 }
