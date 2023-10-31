@@ -43,3 +43,92 @@ public static <fields>;}
 }
 -keepclassmembers class medtel.in.medtelilab.ilablibrary.Urion.BleFragmentActivity
 -keepclassmembers class medtel.in.medtelilab.ilablibrary.Urion.DeviceListActivity
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.BMI.Config
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.BMI.User
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.BMI.UserConst
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.FHR.BleManager
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.FHR.bluetooth.BleBluetooth
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.FHR.bluetooth.BleConnector
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.FHR.bluetooth.MultipleBluetoothController
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.FHR.bluetooth.SplitWriter
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.FHR.callback.BleBaseCallback
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.FHR.callback.BleGattCallback
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.FHR.callback.BleIndicateCallback
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.FHR.callback.BleMtuChangedCallback
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.FHR.callback.BleNotifyCallback
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.FHR.callback.BleReadCallback
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.FHR.callback.BleRssiCallback
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.FHR.callback.BleScanAndConnectCallback
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.FHR.callback.BleScanCallback
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.FHR.callback.BleScanPresenterImp
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.FHR.callback.BleWriteCallback
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.FHR.comm.Observable
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.FHR.comm.Observer
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.FHR.comm.ObserverManager
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.FHR.data.BleDevice
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.FHR.data.BleMsg
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.FHR.data.BleScanState
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.FHR.data.BleWriteState
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.FHR.exception.BleException
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.FHR.exception.ConnectException
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.FHR.exception.GattException
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.FHR.exception.OtherException
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.FHR.exception.TimeoutException
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.FHR.scan.BleScanner
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.FHR.scan.BleScanPresenter
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.FHR.scan.BleScanRuleConfig
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.FHR.utils.BleLog
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.FHR.utils.BleLruHashMap
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.FHR.utils.HexUtil
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.FHR.BleManager
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.HB.BluetoothUtils
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.HB.GattClientActionListener
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.HB.GattClientCallback
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.iBLE.IBLE_Manager
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.iBLE.IBLE_Callback
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.iBLE.IBLE_Const
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.iBLE.IBLE_Device
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.iBLE.IBLE_Error
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.iBLE.IBLE_GattCallback
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.iBLE.IBLE_GlucoseRecord
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.iBLE.IBLE_Manager
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.iBLE.IBLE_ScannerServiceParser
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.BluetoothData
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.BluetoothLeService
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.Constants
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.DeviceTable
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.ReadDevices
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.MedtelScan
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.StringUtils
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.Urion.DeviceListActivity
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.Urion.BleFragmentActivity
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.Urion.interfaces.ICallback
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.Urion.urionbean.Data
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.Urion.urionbean.Error
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.Urion.urionbean.Head
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.Urion.urionbean.IBean
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.Urion.urionbean.Msg
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.Urion.urionbean.Pressure
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.Urion.urionbean.User
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.Urion.urionclass.Average
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.Urion.urionclass.BleServiceHelper
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.Urion.urionclass.BluetoothConnectActivityReceiver
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.Urion.urionclass.ClsUtils
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.Urion.urionclass.First
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.Urion.urionclass.L
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.Urion.urionclass.MySpinnerButton
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.Urion.urionclass.SampleGattAttributes
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.Urion.uriondb.DBOpenHelper
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.Urion.urionrxt.RbxtApp
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.Urion.urionservice.BluetoothLeService
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.Urion.urionservice.ICallback
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.Urion.urionuntil.ByteUtil
+-keepclassmembers class medtel.in.medtelilab.ilablibrary.Urion.urionuntil.CodeFormat
+
+
+
+
+
+
+
+
