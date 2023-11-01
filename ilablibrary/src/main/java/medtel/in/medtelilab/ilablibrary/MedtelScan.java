@@ -606,9 +606,8 @@ public class MedtelScan extends AppCompatActivity {
                         String values=resfhr.getString(5);
                         if (isValuesExpired(values))
                         {
-                            myDb.updatefhraddress(deviceaddress+":000","5");
-                            //String crashString = null;
-                            //int length = crashString.length();
+                            myDb.updatefhraddress(Constants.bluetoothaddress,"5");
+
                         }
 
                     }
@@ -627,7 +626,7 @@ public class MedtelScan extends AppCompatActivity {
                             String values=resbp.getString(5);
                             if (isValuesExpired(values))
                             {
-                                myDb.updatebpaddress(deviceaddress+":00","2");
+                                myDb.updatebpaddress(Constants.bluetoothaddress,"2");
 
                             }
                         }
@@ -652,7 +651,7 @@ public class MedtelScan extends AppCompatActivity {
                             String values=resweight.getString(5);
                             if (isValuesExpired(values))
                             {
-                                myDb.updateweightaddress(deviceaddress+":00","1");
+                                myDb.updateweightaddress(Constants.bluetoothaddress,"1");
 
                             }
                         }
@@ -675,7 +674,7 @@ public class MedtelScan extends AppCompatActivity {
                             String values=reshb.getString(5);
                             if (isValuesExpired(values))
                             {
-                                myDb.updatehgaddress(deviceaddress+":00","3");
+                                myDb.updatehgaddress(Constants.bluetoothaddress,"3");
 
                             }
                         }
@@ -700,7 +699,7 @@ public class MedtelScan extends AppCompatActivity {
                             String values=resglucose.getString(5);
                             if (isValuesExpired(values))
                             {
-                                myDb.updateglucoseaddress(deviceaddress+":00","4");
+                                myDb.updateglucoseaddress(Constants.bluetoothaddress,"4");
                             }
                         }
 

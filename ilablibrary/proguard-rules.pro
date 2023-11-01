@@ -211,6 +211,15 @@ public static <fields>;}
 -keep class medtel.in.medtelilab.ilablibrary.** {
     *;
 }
+-keep public class medtel.in.medtelilab.ilablibrary.Constants {
+    public protected *;
+}
+-keep public class medtel.in.medtelilab.ilablibrary.MedtelScan {
+    public protected *;
+}
+-keep public class medtel.in.medtelilab.ilablibrary.DeviceTable {
+    public protected *;
+}
 
 
 
