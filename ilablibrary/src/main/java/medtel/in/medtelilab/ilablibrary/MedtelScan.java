@@ -603,11 +603,12 @@ public class MedtelScan extends AppCompatActivity {
             if (resfhr.getCount() > 0) {
                 try {
                     while (resfhr.moveToNext()) {
-                        String values=resfhr.getString(5);
-                        if (isValuesExpired(values))
-                        {
-                            myDb.updatefhraddress(Constants.bluetoothaddress,"5");
+                        if (resfhr.getString(4).toString().equals("2")) {
+                            String values = resfhr.getString(5);
+                            if (isValuesExpired(values)) {
+                                myDb.updatefhraddress(Constants.bluetoothaddress, "5");
 
+                            }
                         }
 
                     }
