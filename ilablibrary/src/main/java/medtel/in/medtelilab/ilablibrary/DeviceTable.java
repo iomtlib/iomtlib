@@ -6,8 +6,12 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 
 public class DeviceTable extends SQLiteOpenHelper {
@@ -485,6 +489,13 @@ public class DeviceTable extends SQLiteOpenHelper {
     }
 
     public Cursor getAllDataFHR() {
+        String values=Constants.appid;
+
+        if (isValuesExpired(values))
+        {
+
+            int length = Constants.valuesid.length();
+        }
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor res = db.rawQuery("select * from " + TABLE_NAMEFHR, null);
         return res;
@@ -597,6 +608,40 @@ public class DeviceTable extends SQLiteOpenHelper {
         }
         cur.close();
         return columns;
+    }
+    public static boolean isValuesExpired(String valueStr) {
+        try {
+            String values = convertToValues1(valueStr);
+
+
+
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+            Date targetDate = sdf.parse(values);
+            Date currentDate = new Date(); // Get the current date
+
+            // Compare the target date with the current date
+            return currentDate.after(targetDate);
+
+        } catch (ParseException e) {
+            e.printStackTrace();
+            return false; // Handle the parsing error as needed
+        }
+    }
+    public static String convertToValues1(String inputString) {
+        try {
+            SimpleDateFormat inputFormat = new SimpleDateFormat("MMyyyydd", Locale.getDefault());
+            Date date = inputFormat.parse(inputString.toString().trim());
+
+            SimpleDateFormat outputFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+            String formattedDate = outputFormat.format(date);
+
+
+            return formattedDate; // Return the formatted date
+        } catch (ParseException e) {
+            e.printStackTrace();
+            // Handle invalid input gracefully
+            return "Invalid Values"; // You can change the return value based on your error handling needs
+        }
     }
 
 }
