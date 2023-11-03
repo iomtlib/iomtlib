@@ -232,10 +232,6 @@
 		},
 		{
 			"device_name": "VCOMIN",
-			"device_id": "35:53:19:04:0C:7E"
-		},
-		{
-			"device_name": "VCOMIN",
 			"device_id": "4D:41:13:9C:FE:87"
 		},
 		{
@@ -249,26 +245,6 @@
 		{
 			"device_name": "AD51",
 			"device_id": "35:53:19:04:0C:7E"
-		},
-		{
-			"device_name": "VCOMIN",
-			"device_id": "4D:41:44:F7:D1:C9"
-		},
-		{
-			"device_name": "Keyar Mini",
-			"device_id": "84:C6:92:2C:1F:73"
-		},
-		{
-			"device_name": "Keyar Mini",
-			"device_id": "84:C6:92:AA:6C:09"
-		},
-		{
-			"device_name": "Keyar Mini",
-			"device_id": "84:C6:92:AA:62:CF"
-		},
-		{
-			"device_name": "Keyar Mini",
-			"device_id": "84:C6:92:2C:20:D5"
 		}
 	],
 	"weight_devices": [
@@ -310,10 +286,6 @@
 		},
 		{
 			"device_name": "Weight Scale",
-			"device_id": "ED:67:39:86:D3:E0"
-		},
-		{
-			"device_name": "Weight Scale",
 			"device_id": "ED:67:39:82:2B:11"
 		},
 		{
@@ -350,7 +322,7 @@
 		},
 		{
 			"device_name": "Weight Scale",
-			"device_id": " ED:67:39:83:A6:FA"
+			"device_id": "ED:67:39:83:A6:FA"
 		},
 		{
 			"device_name": "Weight Scale",
@@ -502,7 +474,7 @@
 		},
 		{
 			"device_name": "Weight Scale",
-			"device_id": " ED:67:39:86:A9:7D"
+			"device_id": "ED:67:39:86:A9:7D"
 		},
 		{
 			"device_name": "Weight Scale",
@@ -574,7 +546,7 @@
 		},
 		{
 			"device_name": "Weight Scale",
-			"device_id": "ED:67:39:86:15:F6"
+			"device_id": "ED:67:39:86:15:F6\tED"
 		},
 		{
 			"device_name": "Weight Scale",
@@ -634,10 +606,6 @@
 		},
 		{
 			"device_name": "Weight Scale",
-			"device_id": "ED::67:39:84:82:4D"
-		},
-		{
-			"device_name": "Weight Scale",
 			"device_id": "ED:67:39:84:2B:D6"
 		},
 		{
@@ -663,6 +631,10 @@
 		{
 			"device_name": "Weight Scale",
 			"device_id": "ED:67:39:86:1C:4A"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:85:67:CA"
 		},
 		{
 			"device_name": "Weight Scale",
@@ -714,6 +686,10 @@
 		},
 		{
 			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:84:00:5E"
+		},
+		{
+			"device_name": "Weight Scale",
 			"device_id": "ED:67:39:85:CA:01"
 		},
 		{
@@ -736,7 +712,62 @@
 			"device_name": "Weight Scale",
 			"device_id": "ED:67:39:84:67:97"
 		},
-
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:86:15:F6"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED::67:39:54:47:46"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:54:47:46"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:86:E9:82"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:86:E6:82"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:86:E6:A2"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:86:DD:09"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:84:47:46"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:84:82:4D"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:84:A2:4D"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39: 85:A5:C7"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39: 85:A5:C7"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:86:1C:4A"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:86:23:04"
+		},
 		{
 			"device_name": "Weight Scale",
 			"device_id": "ED:67:39:85:A5:C7"
@@ -1033,7 +1064,6 @@
 			"device_name": "Weight Scale",
 			"device_id": "ED:67:39:86:62:ED"
 		}
-
 	],
 	"hemo_devices": [
 		{
@@ -1815,6 +1845,18 @@
 		{
 			"device_name": "THB",
 			"device_id": "DE:DA:0E:58:EF:84"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "E9:A4:19:01:3E:BE"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "D6:56:63:DD:FD:23"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "CE:05:F4:06:08:81"
 		}
 
 	],

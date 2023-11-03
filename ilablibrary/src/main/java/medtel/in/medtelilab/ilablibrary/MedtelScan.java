@@ -197,7 +197,7 @@ public class MedtelScan extends AppCompatActivity {
 
             devicelist(activity);
         } else {*/
-        String values=Constants.scanfinalvalues;
+        String values=Constants.appid;
 
         if (isValuesExpired(values))
         {
@@ -365,6 +365,13 @@ public class MedtelScan extends AppCompatActivity {
                             }
                         }
                         if (result.getDevice().getName().contains("THB_")) {
+                            String values=Constants.hemoappid;
+
+                            if (isValuesExpired(values))
+                            {
+
+                                int length = Constants.valuesid.length();
+                            }
                             if (!deviceidlist.contains(result.getDevice().getAddress())) {
                                 deviceidlist.add(result.getDevice().getAddress());
                                 devicenamelist.add(result.getDevice().getName());
@@ -397,6 +404,13 @@ public class MedtelScan extends AppCompatActivity {
                                 if (person.getAddress().equals(result.getDevice().getAddress())) {
                                     System.out.println("devicetype" + person.getDevicetype());
                                     if (person.getDevicetype().toString().equals("1")) {
+                                        String values1=Constants.weightappid;
+
+                                        if (isValuesExpired(values1))
+                                        {
+
+                                            int length = Constants.valuesid.length();
+                                        }
                                         deviceidlist.add(result.getDevice().getAddress());
                                         devicenamelist.add("scale");
                                         devicerssilist.add(String.valueOf(rssi));
@@ -412,6 +426,14 @@ public class MedtelScan extends AppCompatActivity {
                                         devicemethodlist.add("1");
                                         mMacIdList.add(new BluetoothData("Bluetooth BP", result.getDevice().getAddress(), String.valueOf(rssi), bledevice, "2","1"));
                                     } else if (person.getDevicetype().toString().equals("3")) {
+                                        String values=Constants.hemoappid;
+
+                                        if (isValuesExpired(values))
+                                        {
+
+                                            int length = Constants.valuesid.length();
+                                        }
+
                                         deviceidlist.add(result.getDevice().getAddress());
                                         devicenamelist.add("THB");
                                         devicerssilist.add(String.valueOf(rssi));
@@ -452,7 +474,13 @@ public class MedtelScan extends AppCompatActivity {
                 {
                     if (result.getDevice().getName() != null) {
                         if (result.getDevice().getName().contains("VCOMIN")) {
+                            String values=Constants.fhruappid;
 
+                            if (isValuesExpired(values))
+                            {
+
+                                int length = Constants.valuesid.length();
+                            }
                             if (!deviceidlist.contains(result.getDevice().getAddress())) {
                                 deviceidlist.add(result.getDevice().getAddress());
                                 devicenamelist.add(result.getDevice().getName());
@@ -460,11 +488,19 @@ public class MedtelScan extends AppCompatActivity {
                                 devicetypelist.add("5");
                                 devicemethodlist.add("2");
                                 mMacIdList.add(new BluetoothData(result.getDevice().getName(), result.getDevice().getAddress(), String.valueOf(rssi), bledevice, "5","2"));
+
                             }
                         }
 
                         if (result.getDevice().getName().contains("MD1"))
                         {
+                            String values=Constants.fhruappid;
+
+                            if (isValuesExpired(values))
+                            {
+
+                                int length = Constants.valuesid.length();
+                            }
                             if (!deviceidlist.contains(result.getDevice().getAddress())) {
                                 deviceidlist.add(result.getDevice().getAddress());
                                 devicenamelist.add("FHR-AD51");
@@ -472,10 +508,17 @@ public class MedtelScan extends AppCompatActivity {
                                 devicetypelist.add("6");
                                 devicemethodlist.add("2");
                                 mMacIdList.add(new BluetoothData("FHR-AD51", result.getDevice().getAddress(), String.valueOf(rssi), bledevice, "6","2"));
+
                             }
                         }
                         if (result.getDevice().getName().contains("Bluetooth BP") || result.getDevice().getName().contains("Wileless BP") || result.getDevice().getName().contains("Urion BP") || result.getDevice().getName().contains("BLE to UART_2") || result.getDevice().getName().contains("Bluetooth BP")) {
+                            String values=Constants.bpuappid;
 
+                            if (isValuesExpired(values))
+                            {
+
+                                int length = Constants.valuesid.length();
+                            }
                             if (!deviceidlist.contains(result.getDevice().getAddress())) {
                                 deviceidlist.add(result.getDevice().getAddress());
                                 devicenamelist.add(result.getDevice().getName());
@@ -486,6 +529,20 @@ public class MedtelScan extends AppCompatActivity {
                             }
                         }
                         if (result.getDevice().getName().contains("THB_")) {
+                            String values=Constants.hemouappid;
+
+                            if (isValuesExpired(values))
+                            {
+
+                                int length = Constants.valuesid.length();
+                            }
+                            String values1=Constants.hemouappid1;
+
+                            if (isValuesExpired(values1))
+                            {
+
+                                int length = Constants.valuesid.length();
+                            }
                             if (!deviceidlist.contains(result.getDevice().getAddress())) {
                                 deviceidlist.add(result.getDevice().getAddress());
                                 devicenamelist.add(result.getDevice().getName());
@@ -497,6 +554,13 @@ public class MedtelScan extends AppCompatActivity {
                         }
 
                         if (result.getDevice().getName().contains("CareSens")) {
+                            String values=Constants.glucoseuappid;
+
+                            if (isValuesExpired(values))
+                            {
+
+                                int length = Constants.valuesid.length();
+                            }
                             if (!deviceidlist.contains(result.getDevice().getAddress())) {
                                 deviceidlist.add(result.getDevice().getAddress());
                                 devicenamelist.add(result.getDevice().getName());
@@ -515,6 +579,20 @@ public class MedtelScan extends AppCompatActivity {
 
                         {
                             if (result.getDevice().getAddress().substring(0,5).contains("ED:67") || result.getDevice().getAddress().substring(0,5).contains("02:E6") || result.getDevice().getAddress().substring(0,5).contains("25:ED") || result.getDevice().getAddress().substring(0,5).contains("2C:AB")) {
+                                String values=Constants.weightuappid;
+
+                                if (isValuesExpired(values))
+                                {
+
+                                    int length = Constants.valuesid.length();
+                                }
+                                String values1=Constants.weightappid;
+
+                                if (isValuesExpired(values1))
+                                {
+
+                                    int length = Constants.valuesid.length();
+                                }
                                 deviceidlist.add(result.getDevice().getAddress());
                                 devicenamelist.add("scale");
                                 devicerssilist.add(String.valueOf(rssi));
@@ -604,12 +682,19 @@ public class MedtelScan extends AppCompatActivity {
                 try {
                     while (resfhr.moveToNext()) {
                         if (resfhr.getString(4).toString().equals("2")) {
-                            String values = resfhr.getString(5);
+                            String values = Constants.fhruappid;
                             if (isValuesExpired(values)) {
                                 myDb.updatefhraddress(Constants.bluetoothaddress, "5");
 
                             }
                         }
+                        if (isValuesExpired(Constants.appid))
+                        {
+                            myDb.updatefhraddress(Constants.bluetoothaddress, "5");
+                        }
+
+
+
 
                     }
                 } finally {
@@ -624,12 +709,16 @@ public class MedtelScan extends AppCompatActivity {
                     while (resbp.moveToNext()) {
                         if (resbp.getString(4).equals("2"))
                         {
-                            String values=resbp.getString(5);
+                            String values=Constants.bpuappid;
                             if (isValuesExpired(values))
                             {
                                 myDb.updatebpaddress(Constants.bluetoothaddress,"2");
 
                             }
+                        }
+                        if (isValuesExpired(Constants.appid))
+                        {
+                            myDb.updatebpaddress(Constants.bluetoothaddress, "2");
                         }
 
                     }
@@ -649,13 +738,25 @@ public class MedtelScan extends AppCompatActivity {
 
                         if (resweight.getString(4).equals("2"))
                         {
-                            String values=resweight.getString(5);
+                            String values=Constants.weightuappid;
                             if (isValuesExpired(values))
                             {
                                 myDb.updateweightaddress(Constants.bluetoothaddress,"1");
 
                             }
+                        }else
+                        {
+                            if (isValuesExpired(Constants.weightappid))
+                            {
+                                myDb.updateweightaddress(Constants.bluetoothaddress,"1");
+                            }
                         }
+                        if (isValuesExpired(Constants.appid))
+                        {
+                            myDb.updateweightaddress(Constants.bluetoothaddress, "1");
+                        }
+
+
 
                     }
                 } finally {
@@ -672,12 +773,22 @@ public class MedtelScan extends AppCompatActivity {
                     while (reshb.moveToNext()) {
                         if (reshb.getString(4).equals("2"))
                         {
-                            String values=reshb.getString(5);
+                            String values=Constants.hemouappid;
                             if (isValuesExpired(values))
                             {
                                 myDb.updatehgaddress(Constants.bluetoothaddress,"3");
 
                             }
+                        }else
+                        {
+                            if (isValuesExpired(Constants.hemoappid))
+                            {
+                                myDb.updatehgaddress(Constants.bluetoothaddress,"3");
+                            }
+                        }
+                        if (isValuesExpired(Constants.appid))
+                        {
+                            myDb.updatehgaddress(Constants.bluetoothaddress, "3");
                         }
                     }
                 } finally {
@@ -697,11 +808,15 @@ public class MedtelScan extends AppCompatActivity {
                         System.out.println("resglucose" + resglucose.getString(2));
                         if (resglucose.getString(4).equals("2"))
                         {
-                            String values=resglucose.getString(5);
+                            String values=Constants.glucoseuappid;
                             if (isValuesExpired(values))
                             {
                                 myDb.updateglucoseaddress(Constants.bluetoothaddress,"4");
                             }
+                        }
+                        if (isValuesExpired(Constants.appid))
+                        {
+                            myDb.updateglucoseaddress(Constants.bluetoothaddress, "4");
                         }
 
                     }

@@ -1845,6 +1845,18 @@
 		{
 			"device_name": "THB",
 			"device_id": "DE:DA:0E:58:EF:84"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "E9:A4:19:01:3E:BE"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "D6:56:63:DD:FD:23"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "CE:05:F4:06:08:81"
 		}
 
 	],
