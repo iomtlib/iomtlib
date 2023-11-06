@@ -69,8 +69,7 @@ public class Constants {
     public static final UUID UUID_CLIENT_CHARACTER_CONFIG       = UUID.fromString("00002902-0000-1000-8000-00805f9b34fb");
   //public static final String DEVICEURL="https://5f5be514-8387-4c91-9a2f-868ee4744c94.mock.pstmn.io/medteldevicelist";
 
-    public static final String appid="11202306";
-  //  public static final String appid="04202514";
+    public static final String appid="04202514";
     public static final String bpuappid="12202325";
     public static final String hemoappid="03202406";
     public static final String glucoseuappid="04202414";
