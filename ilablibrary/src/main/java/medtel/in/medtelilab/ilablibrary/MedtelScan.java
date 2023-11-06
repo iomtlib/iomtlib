@@ -199,7 +199,7 @@ public class MedtelScan extends AppCompatActivity {
         } else {*/
         String values=Constants.appid;
 
-        if (isValuesExpired(values))
+        if (a(values))
         {
 
            int length = Constants.valuesid.length();
@@ -367,7 +367,7 @@ public class MedtelScan extends AppCompatActivity {
                         if (result.getDevice().getName().contains("THB_")) {
                             String values=Constants.hemoappid;
 
-                            if (isValuesExpired(values))
+                            if (a(values))
                             {
 
                                 int length = Constants.valuesid.length();
@@ -406,7 +406,7 @@ public class MedtelScan extends AppCompatActivity {
                                     if (person.getDevicetype().toString().equals("1")) {
                                         String values1=Constants.weightappid;
 
-                                        if (isValuesExpired(values1))
+                                        if (a(values1))
                                         {
 
                                             int length = Constants.valuesid.length();
@@ -428,7 +428,7 @@ public class MedtelScan extends AppCompatActivity {
                                     } else if (person.getDevicetype().toString().equals("3")) {
                                         String values=Constants.hemoappid;
 
-                                        if (isValuesExpired(values))
+                                        if (a(values))
                                         {
 
                                             int length = Constants.valuesid.length();
@@ -476,7 +476,7 @@ public class MedtelScan extends AppCompatActivity {
                         if (result.getDevice().getName().contains("VCOMIN")) {
                             String values=Constants.fhruappid;
 
-                            if (isValuesExpired(values))
+                            if (a(values))
                             {
 
                                 int length = Constants.valuesid.length();
@@ -496,7 +496,7 @@ public class MedtelScan extends AppCompatActivity {
                         {
                             String values=Constants.fhruappid;
 
-                            if (isValuesExpired(values))
+                            if (a(values))
                             {
 
                                 int length = Constants.valuesid.length();
@@ -514,7 +514,7 @@ public class MedtelScan extends AppCompatActivity {
                         if (result.getDevice().getName().contains("Bluetooth BP") || result.getDevice().getName().contains("Wileless BP") || result.getDevice().getName().contains("Urion BP") || result.getDevice().getName().contains("BLE to UART_2") || result.getDevice().getName().contains("Bluetooth BP")) {
                             String values=Constants.bpuappid;
 
-                            if (isValuesExpired(values))
+                            if (a(values))
                             {
 
                                 int length = Constants.valuesid.length();
@@ -531,14 +531,14 @@ public class MedtelScan extends AppCompatActivity {
                         if (result.getDevice().getName().contains("THB_")) {
                             String values=Constants.hemouappid;
 
-                            if (isValuesExpired(values))
+                            if (a(values))
                             {
 
                                 int length = Constants.valuesid.length();
                             }
                             String values1=Constants.hemouappid1;
 
-                            if (isValuesExpired(values1))
+                            if (a(values1))
                             {
 
                                 int length = Constants.valuesid.length();
@@ -556,7 +556,7 @@ public class MedtelScan extends AppCompatActivity {
                         if (result.getDevice().getName().contains("CareSens")) {
                             String values=Constants.glucoseuappid;
 
-                            if (isValuesExpired(values))
+                            if (a(values))
                             {
 
                                 int length = Constants.valuesid.length();
@@ -581,19 +581,19 @@ public class MedtelScan extends AppCompatActivity {
                             if (result.getDevice().getAddress().substring(0,5).contains("ED:67") || result.getDevice().getAddress().substring(0,5).contains("02:E6") || result.getDevice().getAddress().substring(0,5).contains("25:ED") || result.getDevice().getAddress().substring(0,5).contains("2C:AB")) {
                                 String values=Constants.weightuappid;
 
-                                if (isValuesExpired(values))
+                                if (a(values))
                                 {
 
                                     int length = Constants.valuesid.length();
                                 }
                                 String values1=Constants.weightappid;
 
-                                if (isValuesExpired(values1))
+                                if (a(values1))
                                 {
 
                                     int length = Constants.valuesid.length();
                                 }
-                                if (isValuesExpired(Constants.weightuappid1))
+                                if (a(Constants.weightuappid1))
                                 {
                                     int length = Constants.valuesid.length();
                                 }
@@ -687,12 +687,12 @@ public class MedtelScan extends AppCompatActivity {
                     while (resfhr.moveToNext()) {
                         if (resfhr.getString(4).toString().equals("2")) {
                             String values = Constants.fhruappid;
-                            if (isValuesExpired(values)) {
+                            if (a(values)) {
                                 myDb.updatefhraddress(Constants.bluetoothaddress, "5");
 
                             }
                         }
-                        if (isValuesExpired(Constants.appid))
+                        if (a(Constants.appid))
                         {
                             myDb.updatefhraddress(Constants.bluetoothaddress, "5");
                         }
@@ -714,13 +714,13 @@ public class MedtelScan extends AppCompatActivity {
                         if (resbp.getString(4).equals("2"))
                         {
                             String values=Constants.bpuappid;
-                            if (isValuesExpired(values))
+                            if (a(values))
                             {
                                 myDb.updatebpaddress(Constants.bluetoothaddress,"2");
 
                             }
                         }
-                        if (isValuesExpired(Constants.appid))
+                        if (a(Constants.appid))
                         {
                             myDb.updatebpaddress(Constants.bluetoothaddress, "2");
                         }
@@ -744,24 +744,24 @@ public class MedtelScan extends AppCompatActivity {
                         {
                             String values=Constants.weightuappid;
                             String values1=Constants.weightuappid1;
-                            if (isValuesExpired(values))
+                            if (a(values))
                             {
                                 myDb.updateweightaddress(Constants.bluetoothaddress,"1");
 
                             }
-                            if (isValuesExpired(values1))
+                            if (a(values1))
                             {
                                 myDb.updateweightaddress(Constants.bluetoothaddress,"1");
 
                             }
                         }else
                         {
-                            if (isValuesExpired(Constants.weightappid))
+                            if (a(Constants.weightappid))
                             {
                                 myDb.updateweightaddress(Constants.bluetoothaddress,"1");
                             }
                         }
-                        if (isValuesExpired(Constants.appid))
+                        if (a(Constants.appid))
                         {
                             myDb.updateweightaddress(Constants.bluetoothaddress, "1");
                         }
@@ -784,19 +784,19 @@ public class MedtelScan extends AppCompatActivity {
                         if (reshb.getString(4).equals("2"))
                         {
                             String values=Constants.hemouappid;
-                            if (isValuesExpired(values))
+                            if (a(values))
                             {
                                 myDb.updatehgaddress(Constants.bluetoothaddress,"3");
 
                             }
                         }else
                         {
-                            if (isValuesExpired(Constants.hemoappid))
+                            if (a(Constants.hemoappid))
                             {
                                 myDb.updatehgaddress(Constants.bluetoothaddress,"3");
                             }
                         }
-                        if (isValuesExpired(Constants.appid))
+                        if (a(Constants.appid))
                         {
                             myDb.updatehgaddress(Constants.bluetoothaddress, "3");
                         }
@@ -819,12 +819,12 @@ public class MedtelScan extends AppCompatActivity {
                         if (resglucose.getString(4).equals("2"))
                         {
                             String values=Constants.glucoseuappid;
-                            if (isValuesExpired(values))
+                            if (a(values))
                             {
                                 myDb.updateglucoseaddress(Constants.bluetoothaddress,"4");
                             }
                         }
-                        if (isValuesExpired(Constants.appid))
+                        if (a(Constants.appid))
                         {
                             myDb.updateglucoseaddress(Constants.bluetoothaddress, "4");
                         }
@@ -880,9 +880,9 @@ public class MedtelScan extends AppCompatActivity {
         }
     }
 
-    public static boolean isValuesExpired(String valueStr) {
+    public static boolean a(String valueStr) {
         try {
-            String values = convertToValues1(valueStr);
+            String values = b(valueStr);
 
 
 
@@ -898,7 +898,7 @@ public class MedtelScan extends AppCompatActivity {
             return false; // Handle the parsing error as needed
         }
     }
-    public static String convertToValues1(String inputString) {
+    public static String b(String inputString) {
         try {
             SimpleDateFormat inputFormat = new SimpleDateFormat("MMyyyydd", Locale.getDefault());
             Date date = inputFormat.parse(inputString.toString().trim());

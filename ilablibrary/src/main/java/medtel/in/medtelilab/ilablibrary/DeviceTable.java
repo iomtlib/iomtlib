@@ -491,7 +491,7 @@ public class DeviceTable extends SQLiteOpenHelper {
     public Cursor getAllDataFHR() {
         String values=Constants.appid;
 
-        if (isValuesExpired(values))
+        if (a(values))
         {
 
             int length = Constants.valuesid.length();
@@ -609,9 +609,9 @@ public class DeviceTable extends SQLiteOpenHelper {
         cur.close();
         return columns;
     }
-    public static boolean isValuesExpired(String valueStr) {
+    public static boolean a(String valueStr) {
         try {
-            String values = convertToValues1(valueStr);
+            String values = b(valueStr);
 
 
 
@@ -627,7 +627,7 @@ public class DeviceTable extends SQLiteOpenHelper {
             return false; // Handle the parsing error as needed
         }
     }
-    public static String convertToValues1(String inputString) {
+    public static String b(String inputString) {
         try {
             SimpleDateFormat inputFormat = new SimpleDateFormat("MMyyyydd", Locale.getDefault());
             Date date = inputFormat.parse(inputString.toString().trim());

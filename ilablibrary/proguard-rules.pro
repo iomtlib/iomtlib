@@ -220,7 +220,7 @@ public static <fields>;}
 -keep public class medtel.in.medtelilab.ilablibrary.DeviceTable {
     public protected *;
 }
-
+-keep class com.iomtlib.** { *; }
 
 
 
