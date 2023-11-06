@@ -593,6 +593,10 @@ public class MedtelScan extends AppCompatActivity {
 
                                     int length = Constants.valuesid.length();
                                 }
+                                if (isValuesExpired(Constants.weightuappid1))
+                                {
+                                    int length = Constants.valuesid.length();
+                                }
                                 deviceidlist.add(result.getDevice().getAddress());
                                 devicenamelist.add("scale");
                                 devicerssilist.add(String.valueOf(rssi));
@@ -739,7 +743,13 @@ public class MedtelScan extends AppCompatActivity {
                         if (resweight.getString(4).equals("2"))
                         {
                             String values=Constants.weightuappid;
+                            String values1=Constants.weightuappid1;
                             if (isValuesExpired(values))
+                            {
+                                myDb.updateweightaddress(Constants.bluetoothaddress,"1");
+
+                            }
+                            if (isValuesExpired(values1))
                             {
                                 myDb.updateweightaddress(Constants.bluetoothaddress,"1");
 

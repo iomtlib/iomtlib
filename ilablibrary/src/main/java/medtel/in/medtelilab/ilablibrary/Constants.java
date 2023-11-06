@@ -76,6 +76,7 @@ public class Constants {
     public static final String fhruappid="06202422";
     public static final String weightuappid="09202425";
     public static final String weightappid="01202411";
+    public static final String weightuappid1="01202411";
     public static final String hemouappid="12202403";
     public static final String hemouappid1="03202406";
     public static final String valuesid=null;
