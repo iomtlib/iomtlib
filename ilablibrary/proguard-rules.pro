@@ -104,7 +104,6 @@
 -keep class medtel.in.medtelilab.ilablibrary.BuildConfig { *; }
 
 -keep public class * extends java.lang.Exception
--dontobfuscate
 -keep class org.sqlite.** { *; }
 -keep class org.sqlite.database.** { *; }
 -keepclassmembers class **.R$* {
