@@ -1063,6 +1063,46 @@
 		{
 			"device_name": "Weight Scale",
 			"device_id": "ED:67:39:86:62:ED"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:84:07:28"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:83:F2:B8"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:86:8E:D6"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:84:55:71"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:86:15:17"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:84:66:70"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:84:4C:56"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:84:14:18"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:84:E4:4B"
+		},
+		{
+			"device_name": "Weight Scale",
+			"device_id": "ED:67:39:85:E8:9C"
 		}
 	],
 	"hemo_devices": [
@@ -1857,6 +1897,46 @@
 		{
 			"device_name": "THB",
 			"device_id": "CE:05:F4:06:08:81"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "C8:84:7B:04:D2:5F"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "D0:51:A3:43:90:97"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "F0:F2:96:9C:4C:39"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "D0:7E:79:51:A1:73"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "D1:75:6F:74:D3:45"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "CD:61:92:77:70:B5"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "E2:14:2A:5A:42:CF"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "D2:0A:5A:2F:D7:B1"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "EA:DF:0B:1A:74:35"
+		},
+		{
+			"device_name": "THB",
+			"device_id": "D7:DE:9D:E2:29:95"
 		}
 
 	],
@@ -2800,6 +2880,46 @@
 		{
 			"device_name": "Bluetooth BP",
 			"device_id": "D1:F0:01:01:72:03"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:95:F6"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:90:0D"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8F:46"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:91:F1"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:91:EE"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:96:BD"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:89:BC"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8C:A0"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:57:45"
+		},
+		{
+			"device_name": "Bluetooth BP",
+			"device_id": "D1:F0:01:01:8A:54"
 		}
 	],
 	"glucose_devices": [
@@ -3646,6 +3766,46 @@
 		{
 			"device_name": "GLUCOSE",
 			"device_id": "84:C6:92:D1:AB:3F"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:2C:15:C2"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:D1:9D:17"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:D1:9B:3E"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:D1:AD:B3"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:AA:1D:5E"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:D1:9D:61"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:AA:1F:67"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:AA:1D:66"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:27:DC:75"
+		},
+		{
+			"device_name": "GLUCOSE",
+			"device_id": "84:C6:92:2B:B7:34"
 		}
 	]
 }
