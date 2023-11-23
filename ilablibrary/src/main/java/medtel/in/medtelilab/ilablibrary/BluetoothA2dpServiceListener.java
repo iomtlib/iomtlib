@@ -1,11 +1,9 @@
 package medtel.in.medtelilab.ilablibrary;
 
-
 import android.bluetooth.BluetoothA2dp;
 import android.bluetooth.BluetoothProfile;
 
 public class BluetoothA2dpServiceListener implements BluetoothProfile.ServiceListener {
-
     private BluetoothA2dp bluetoothA2dp;
 
     @Override

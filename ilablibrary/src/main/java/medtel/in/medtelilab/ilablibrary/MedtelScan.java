@@ -3,18 +3,14 @@ package medtel.in.medtelilab.ilablibrary;
 import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.bluetooth.BluetoothA2dp;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
-import android.bluetooth.BluetoothProfile;
 import android.bluetooth.le.BluetoothLeScanner;
 import android.bluetooth.le.ScanCallback;
 import android.bluetooth.le.ScanResult;
-import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.content.res.AssetManager;
 import android.database.Cursor;
@@ -44,7 +40,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.lang.reflect.Method;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -54,7 +49,6 @@ import java.util.Locale;
 
 import medtel.in.medtelilab.ilablibrary.FHR.BleManager;
 import medtel.in.medtelilab.ilablibrary.FHR.data.BleDevice;
-import medtel.in.medtelilab.ilablibrary.Urion.urionclass.L;
 import okhttp3.MediaType;
 
 public class MedtelScan extends AppCompatActivity {
@@ -88,6 +82,7 @@ public class MedtelScan extends AppCompatActivity {
     LinearLayout devicelayout;
     DeviceTable myDb;
     public static Boolean bpconnectionstatus=false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -922,65 +917,5 @@ public class MedtelScan extends AppCompatActivity {
     }
 
 
-   public  void checkbpBluetoothConnectionState(String deviceAddress) {
-        BluetoothAdapter bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-        BluetoothDevice device = bluetoothAdapter.getRemoteDevice(deviceAddress);
-
-        // Register for broadcasts when a device is connected or disconnected
-        IntentFilter filter = new IntentFilter(BluetoothDevice.ACTION_ACL_CONNECTED);
-        filter.addAction(BluetoothDevice.ACTION_ACL_DISCONNECTED);
-        registerReceiver(bluetoothReceiver, filter);
-
-        // Get the A2DP profile
-        BluetoothA2dp bluetoothA2dp = getBluetoothA2dp();
-
-        if (bluetoothA2dp != null) {
-            // Get the connection state
-            int connectionState = bluetoothA2dp.getConnectionState(device);
-
-            switch (connectionState) {
-                case BluetoothProfile.STATE_CONNECTED:
-                    //    Toast.makeText(this, "Device is connected", Toast.LENGTH_SHORT).show();
-                    break;
-                case BluetoothProfile.STATE_DISCONNECTED:
-                    //   Toast.makeText(this, "Device is disconnected", Toast.LENGTH_SHORT).show();
-                    break;
-                default:
-                    // Toast.makeText(this, "Device connection state: " + connectionState, Toast.LENGTH_SHORT).show();
-                    break;
-            }
-        } else {
-            // Toast.makeText(this, "A2DP profile not available", Toast.LENGTH_SHORT).show();
-        }
-    }
-
-    private BluetoothA2dp getBluetoothA2dp() {
-        try {
-            BluetoothAdapter bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-            Method getProfileProxyMethod = BluetoothAdapter.class.getMethod("getProfileProxy", Context.class, BluetoothProfile.ServiceListener.class, int.class);
-            BluetoothA2dpServiceListener bluetoothA2dpServiceListener = new BluetoothA2dpServiceListener();
-            if (getProfileProxyMethod.invoke(bluetoothAdapter, this, bluetoothA2dpServiceListener, BluetoothProfile.A2DP) != null) {
-                return bluetoothA2dpServiceListener.getBluetoothA2dp();
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-    // BroadcastReceiver to listen for Bluetooth device connection events
-    private final BroadcastReceiver bluetoothReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            String action = intent.getAction();
-            if (BluetoothDevice.ACTION_ACL_CONNECTED.equals(action)) {
-                bpconnectionstatus=true;
-                //   Toast.makeText(context, "Bluetooth device connected", Toast.LENGTH_SHORT).show();
-            } else if (BluetoothDevice.ACTION_ACL_DISCONNECTED.equals(action)) {
-                bpconnectionstatus=false;
-                //  Toast.makeText(context, "Bluetooth device disconnected", Toast.LENGTH_SHORT).show();
-            }
-        }
-    };
 
 }
