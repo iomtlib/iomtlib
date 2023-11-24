@@ -343,7 +343,7 @@ public class MedtelScan extends AppCompatActivity {
                             }
                         }
 
-                        if (result.getDevice().getName().contains("MD1"))
+                        if (result.getDevice().getName().contains("MD1") || result.getDevice().getName().contains("AD5"))
                         {
                             if (!deviceidlist.contains(result.getDevice().getAddress())) {
                                 deviceidlist.add(result.getDevice().getAddress());
@@ -493,7 +493,7 @@ public class MedtelScan extends AppCompatActivity {
                             }
                         }
 
-                        if (result.getDevice().getName().contains("MD1"))
+                        if (result.getDevice().getName().contains("MD1") || result.getDevice().getName().contains("AD5"))
                         {
                             String values=Constants.fhruappid;
 
