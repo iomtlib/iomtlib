@@ -434,10 +434,315 @@
 		{
 			"device_name": "AD51",
 			"device_id": "C7:8C:13:27:AB:6C"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:29:31:FD"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:27:AB:46"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:2A:B8:AD"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:27:AB:66"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "17:71:12:50:53:F6"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "17:71:12:50:53:FA"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:2A:B8:7C"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:2A:B8:8B"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:29:32:0A"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "17:71:12:51:DA:89"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:27:AB:54"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:27:AB:6E"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:2A:B8:A3"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "17:71:12:53:61:50"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:2A:B8:7F"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:29:32:03"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": " C7:8C:13:29:32:0B"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "17:71:12:50:53:F3"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:29:32:31"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:27:AB:42"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:2A:B7:E1"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "17:71:12:51:DA:83"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": " C7:8C:13:2A:B8:7A"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:29:32:34"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:27:AB:61"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:2A:B8:91"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:2A:B8:81"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "17:71:12:53:61:4B"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:27:AB:4E"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:27:AB:3B"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "17:71:12:50:53:FE"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "17:71:12:51:DA:7B"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:29:32:08"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:2A:B8:85"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:29:32:28"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:2A:B8:96"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:29:31:FF"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "17:71:12:53:61:43"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:29:32:30"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:2A:B8:B3"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "17:71:12:50:53:FC"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "17:71:12:50:53:F8"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:2A:B8:AC"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "17:71:12:51:DA:7C"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:27:AB:3A"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "17:71:12:50:53:F1"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:2A:B8:83"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:2A:B8:90"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:27:AB:44"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:29:32:36"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:29:32:09"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:2A:B8:89"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "17:71:12:50:53:F2"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:27:AB:51"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "17:71:12:53:61:48"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:29:32:2E"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": " C7:8C:13:29:32:2C"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:2A:B8:A8"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:2A:B8:B4"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "17:71:12:50:53:EE"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:27:AB:52"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:29:32:27"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "17:71:12:53:61:4A"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:27:AB:6F"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": " C7:8C:13:2A:B8:AB"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:27:AB:70"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": " C7:8C:13:29:32:2D"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:29:32:00"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:2A:B8:AE"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "17:71:12:50:53:F7"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:29:32:07"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:27:AB:6A"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "17:71:12:51:DA:82"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:2A:B8:95"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:27:AB:39"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:2A:B8:8A"
+		},
+		{
+			"device_name": "AD51",
+			"device_id": "C7:8C:13:29:32:13"
 		}
-
-
-
 	],
 	"weight_devices": [
 		{
