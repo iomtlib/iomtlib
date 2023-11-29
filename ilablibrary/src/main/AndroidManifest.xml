@@ -38,7 +38,8 @@
         <service android:name=".Urion.urionservice.BluetoothLeService" />
         <service
             android:name=".BluetoothLeService"
-            android:enabled="true" />
+            android:enabled="true"
+            android:exported="false"/>
     <activity android:name=".MedtelScan"
         android:exported="true"></activity>
 
@@ -72,6 +73,7 @@
             android:exported="true"></activity>
         <activity android:name=".HB.GattClientCallback"
             android:exported="true"></activity>
+
     </application>
 
 </manifest>
