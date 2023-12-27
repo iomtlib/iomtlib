@@ -49,6 +49,7 @@ import java.util.Locale;
 
 import medtel.in.medtelilab.ilablibrary.FHR.BleManager;
 import medtel.in.medtelilab.ilablibrary.FHR.data.BleDevice;
+import medtel.in.medtelilab.ilablibrary.FHR.GattClientActionListenerfhr;
 import okhttp3.MediaType;
 
 public class MedtelScan extends AppCompatActivity {
@@ -915,7 +916,12 @@ public class MedtelScan extends AppCompatActivity {
             return "Invalid Values"; // You can change the return value based on your error handling needs
         }
     }
-
-
-
+    public static String reverseByteOrder(String hexString) {
+        // Reverse the byte order in pairs (2 hex characters each)
+        StringBuilder reversed = new StringBuilder();
+        for (int i = hexString.length() - 2; i >= 0; i -= 2) {
+            reversed.append(hexString.substring(i, i + 2));
+        }
+        return reversed.toString();
+    }
 }

@@ -39,6 +39,7 @@ public class BluetoothLeService extends Service {
 	public final static String ACTION_GATT_SERVICES_DISCOVERED = "ACTION_GATT_SERVICES_DISCOVERED";
 	public final static String ACTION_DATA_AVAILABLE = "ACTION_DATA_AVAILABLE";
 	public final static String ACTION_GATT_WRITE_SUCCESS = "ACTION_GATT_WRITE_SUCCESS";
+	public static  String bpconnectstatus="";
 //	public final static UUID UUID_HEART_RATE_MEASUREMENT = UUID
 //			.fromString(SampleGattAttributes.HEART_RATE_MEASUREMENT);
 
@@ -55,12 +56,14 @@ public class BluetoothLeService extends Service {
 					mConnectionState = STATE_CONNECTED;
 					broadcastUpdate(intentAction);
 					boolean bb = mBluetoothGatt.discoverServices();
+					bpconnectstatus="1";
 					Log.i(TAG, "Connected to GATT server." + bb);
 
 			} else if (newState == BluetoothProfile.STATE_DISCONNECTED) {
 
 					intentAction = ACTION_GATT_DISCONNECTED;
 					mConnectionState = STATE_DISCONNECTED;
+					bpconnectstatus="3";
 					Log.i(TAG, "Disconnected from GATT server.");
 					broadcastUpdate(intentAction);
 
@@ -72,6 +75,7 @@ public class BluetoothLeService extends Service {
 			super.onDescriptorWrite(gatt, descriptor, status);
 			if(status == BluetoothGatt.GATT_SUCCESS){
 				Log.d("==","success");
+				bpconnectstatus="2";
 				Intent intent = new Intent(ACTION_GATT_WRITE_SUCCESS);
 				sendBroadcast(intent);
 			}
@@ -193,6 +197,7 @@ public class BluetoothLeService extends Service {
 				.getRemoteDevice(address);
 		if (device == null) {
 			Log.w(TAG, "Device not found.  Unable to connect.");
+			bpconnectstatus="3";
 			return false;
 		}
 //		if(SampleGattAttributes.HEART_RATE_MEASUREMENT.equalsIgnoreCase(MyApp_.getInstance().getUuid_heart_rate_measurement().toString())){
@@ -200,7 +205,7 @@ public class BluetoothLeService extends Service {
 //		}else{
 		mBluetoothGatt = device.connectGatt(this, true, mGattCallback);
 //		}
-		
+		Log.d(TAG,address+"||"+mBluetoothGatt.connect());
 		if (mBluetoothGatt.connect()) { // 连接远程设备。
 			mConnectionState = STATE_CONNECTING;// 
 			Log.d(TAG, "Trying to create a new connection.");
@@ -217,10 +222,11 @@ public class BluetoothLeService extends Service {
 	}
 
 	public void disconnect() {
-		if (mBluetoothAdapter == null || mBluetoothGatt == null) {
-			return;
+		if (mBluetoothGatt != null) {
+			mBluetoothGatt.close();
+			mBluetoothGatt = null;
+			bpconnectstatus="";
 		}
-		mBluetoothGatt.disconnect();
 	}
 
 	public void close() {

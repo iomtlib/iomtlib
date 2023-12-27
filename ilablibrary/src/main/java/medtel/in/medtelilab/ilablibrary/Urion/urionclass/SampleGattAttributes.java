@@ -13,6 +13,7 @@ public class SampleGattAttributes {
 	public static String CLIENT_CHARACTERISTIC_CONFIG = "00002902-0000-1000-8000-00805f9b34fb";
 
 	public static final String DISCONNECTEDBLE = "com.example.urionapp.disconnected";
-
+	public static final String DISCONNECTEDBLE1="com.atollsolutions.icoc_sdk_app.disconnected";
+	public static final String DISCONNECTEDBLE2="org.nhmmp.anmol.disconnected";
 
 }

@@ -156,8 +156,8 @@ public abstract class BleFragmentActivity extends FragmentActivity {
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    if (!mLeDevices.contains(device)) {
-                        mLeDevices.add(device);
+                  //  if (!mLeDevices.contains(device)) {
+                    //    mLeDevices.add(device);
                         L.d("device-->" + device.getName());
                         if (device.getName() != null) {
                             String deviceName = device.getName();
@@ -177,7 +177,7 @@ public abstract class BleFragmentActivity extends FragmentActivity {
                                 });
                             }
                         }
-                    }
+                 //   }
                 }
             });
         }
@@ -249,6 +249,17 @@ public abstract class BleFragmentActivity extends FragmentActivity {
                 }
             }, 1000);
         }
+    }
+
+    public void bpdisconnected()
+    {
+        if(isBleseviceRegiste){
+            unregisterReceiver(getBroadCastReceiver());
+        }
+        if (isBindServise) {
+            this.unbindService(mServiceConnection);
+        }
+        unregisterReceiver(myBleRecever);
     }
 
 

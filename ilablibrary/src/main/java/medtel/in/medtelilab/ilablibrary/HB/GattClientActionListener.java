@@ -18,4 +18,7 @@ public interface GattClientActionListener {
     void disconnectGattServer();
 
     void showToast(String msg);
+
+
+
 }
