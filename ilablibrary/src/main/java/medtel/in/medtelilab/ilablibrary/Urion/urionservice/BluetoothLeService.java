@@ -55,17 +55,24 @@ public class BluetoothLeService extends Service {
 					intentAction = ACTION_GATT_CONNECTED;
 					mConnectionState = STATE_CONNECTED;
 					broadcastUpdate(intentAction);
+				if (mBluetoothGatt != null) {
 					boolean bb = mBluetoothGatt.discoverServices();
-					bpconnectstatus="1";
-					Log.i(TAG, "Connected to GATT server." + bb);
+					bpconnectstatus = "1";
+					Log.i(TAG, "Connected to GATT server. Discovering services: " + bb);
+				} else {
+					Log.e(TAG, "BluetoothGatt is null. Cannot discover services.");
+				}
 
 			} else if (newState == BluetoothProfile.STATE_DISCONNECTED) {
 
-					intentAction = ACTION_GATT_DISCONNECTED;
-					mConnectionState = STATE_DISCONNECTED;
-					bpconnectstatus="3";
-					Log.i(TAG, "Disconnected from GATT server.");
-					broadcastUpdate(intentAction);
+				mConnectionState = STATE_DISCONNECTED;
+				intentAction = ACTION_GATT_DISCONNECTED;
+				bpconnectstatus = "3";
+				Log.i(TAG, "Disconnected from GATT server.");
+				broadcastUpdate(intentAction);
+
+				// Handle disconnection, reset BluetoothGatt or perform cleanup if needed
+				mBluetoothGatt = null;
 
 			}
 		}
@@ -206,7 +213,12 @@ public class BluetoothLeService extends Service {
 		mBluetoothGatt = device.connectGatt(this, true, mGattCallback);
 //		}
 		Log.d(TAG,address+"||"+mBluetoothGatt.connect());
-		if (mBluetoothGatt.connect()) { // 连接远程设备。
+		mConnectionState = STATE_CONNECTING;//
+		Log.d(TAG, "Trying to create a new connection.");
+		mBluetoothDeviceAddress = address;
+		mConnectionState = STATE_CONNECTING;
+		return true;
+		/*if (mBluetoothGatt.connect()) { // 连接远程设备。
 			mConnectionState = STATE_CONNECTING;// 
 			Log.d(TAG, "Trying to create a new connection.");
 			mBluetoothDeviceAddress = address;
@@ -214,7 +226,7 @@ public class BluetoothLeService extends Service {
 			return true;
 		} else {
 			return false;
-		}
+		}*/
 	}
 	
 	public int getConnectionState(){
