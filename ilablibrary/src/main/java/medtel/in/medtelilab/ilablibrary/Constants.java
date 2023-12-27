@@ -70,7 +70,7 @@ public class Constants {
   //public static final String DEVICEURL="https://5f5be514-8387-4c91-9a2f-868ee4744c94.mock.pstmn.io/medteldevicelist";
 
     public static final String appid="04202514";
-    public static final String bpuappid="12202325";
+    public static final String bpuappid="02202425";
     public static final String hemoappid="03202406";
     public static final String glucoseuappid="04202414";
     public static final String fhruappid="06202422";
