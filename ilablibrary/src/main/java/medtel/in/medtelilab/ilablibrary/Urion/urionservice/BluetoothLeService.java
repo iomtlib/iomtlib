@@ -60,6 +60,7 @@ public class BluetoothLeService extends Service {
 					bpconnectstatus = "1";
 					Log.i(TAG, "Connected to GATT server. Discovering services: " + bb);
 				} else {
+					bpconnectstatus="-1";
 					Log.e(TAG, "BluetoothGatt is null. Cannot discover services.");
 				}
 
