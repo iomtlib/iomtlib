@@ -83,7 +83,7 @@ public class MedtelScan extends AppCompatActivity {
     LinearLayout devicelayout;
     DeviceTable myDb;
     public static Boolean bpconnectionstatus=false;
-
+    public static Boolean bpconnectfollow=false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -303,6 +303,94 @@ public class MedtelScan extends AppCompatActivity {
        // }
     }
 
+    public void bpstartscan()
+    {
+        BluetoothAdapter bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+        BluetoothLeScanner bluetoothLeScanner = bluetoothAdapter.getBluetoothLeScanner();
+
+
+        bluetoothLeScanner = bluetoothAdapter.getBluetoothLeScanner();
+        ScanCallback scanCallback = new ScanCallback() {
+            @Override
+            public void onScanResult(int callbackType, ScanResult result) {
+                super.onScanResult(callbackType, result);
+                // Extract the relevant information from the scan result
+                String deviceName = result.getDevice().getName();
+                String deviceAddress = result.getDevice().getAddress();
+                int rssi = result.getRssi();
+                BluetoothDevice devicetypes = bluetoothAdapter.getRemoteDevice(deviceAddress);
+
+                int deviceType = devicetypes.getBluetoothClass().getDeviceClass();
+                System.out.println("devicetypes" + deviceType + "||" + deviceName + "||" + deviceAddress + "||" + medteldevicelist.size());
+
+                jsonstringlist = String.valueOf(deviceType);
+                if (medteldevicelist.contains(result.getDevice().getAddress())) {
+
+                    if (result.getDevice().getName() != null) {
+
+                        if (result.getDevice().getName().contains("Bluetooth BP") || result.getDevice().getName().contains("Wileless BP") || result.getDevice().getName().contains("Urion BP") || result.getDevice().getName().contains("BLE to UART_2") || result.getDevice().getName().contains("Bluetooth BP")) {
+
+                            if (!deviceidlist.contains(result.getDevice().getAddress())) {
+
+                               bpconnectfollow=true;
+                            }
+                        }
+
+
+
+
+                    } else {
+
+                        if (!deviceidlist.contains(result.getDevice().getAddress())) {
+
+
+                            for (BluetoothData person : MedtelmMacIdList) {
+                                if (person.getAddress().equals(result.getDevice().getAddress())) {
+                                    System.out.println("devicetype" + person.getDevicetype());
+                                   if (person.getDevicetype().toString().equals("2")) {
+                                       bpconnectfollow=true;
+                                    }
+                                    break;
+                                }
+                            }
+
+                        }
+                    }
+
+                }else
+                {
+                    if (result.getDevice().getName() != null) {
+
+                        if (result.getDevice().getName().contains("Bluetooth BP") || result.getDevice().getName().contains("Wileless BP") || result.getDevice().getName().contains("Urion BP") || result.getDevice().getName().contains("BLE to UART_2") || result.getDevice().getName().contains("Bluetooth BP")) {
+                            bpconnectfollow=true;
+                        }
+
+
+                    }
+                }
+
+
+            }
+
+            @Override
+            public void onScanFailed(int errorCode) {
+                super.onScanFailed(errorCode);
+                // Handle scan failure, if needed
+                Log.e("ScanFailed", "Error code: " + errorCode);
+            }
+        };
+        bluetoothLeScanner.startScan(scanCallback);
+        long scanDuration =10000; // 10 seconds
+        Handler scanHandler = new Handler();
+        BluetoothLeScanner finalBluetoothLeScanner = bluetoothLeScanner;
+        scanHandler.postDelayed(() -> {
+            if (finalBluetoothLeScanner != null && scanCallback != null) {
+                finalBluetoothLeScanner.stopScan(scanCallback);
+            }
+        }, scanDuration);
+
+    }
+
     public  void startScan() {
         deviceidlist.clear();
         devicenamelist.clear();
@@ -358,12 +446,14 @@ public class MedtelScan extends AppCompatActivity {
                         if (result.getDevice().getName().contains("Bluetooth BP") || result.getDevice().getName().contains("Wileless BP") || result.getDevice().getName().contains("Urion BP") || result.getDevice().getName().contains("BLE to UART_2") || result.getDevice().getName().contains("Bluetooth BP")) {
 
                             if (!deviceidlist.contains(result.getDevice().getAddress())) {
-                                deviceidlist.add(result.getDevice().getAddress());
-                                devicenamelist.add(result.getDevice().getName());
-                                devicerssilist.add(String.valueOf(rssi));
-                                devicetypelist.add("2");
-                                devicemethodlist.add("1");
-                                mMacIdList.add(new BluetoothData(result.getDevice().getName(), result.getDevice().getAddress(), String.valueOf(rssi), bledevice, "2","1"));
+
+                                    deviceidlist.add(result.getDevice().getAddress());
+                                    devicenamelist.add(result.getDevice().getName());
+                                    devicerssilist.add(String.valueOf(rssi));
+                                    devicetypelist.add("2");
+                                    devicemethodlist.add("1");
+                                    mMacIdList.add(new BluetoothData(result.getDevice().getName(), result.getDevice().getAddress(), String.valueOf(rssi), bledevice, "2", "1"));
+
                             }
                         }
                         if (result.getDevice().getName().contains("THB_")) {
@@ -646,6 +736,7 @@ public class MedtelScan extends AppCompatActivity {
             if (checkGPSIsOpen()) {
                 //   setScanRule();
                 startScan();
+                bpstartscan();
             }
         }
     }
