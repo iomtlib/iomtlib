@@ -35,7 +35,10 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
     <application>
-        <service android:name=".Urion.urionservice.BluetoothLeService" />
+        <service
+            android:name=".Urion.urionservice.BluetoothLeService"
+            android:enabled="true"
+            android:exported="false" />
         <service
             android:name=".BluetoothLeService"
             android:enabled="true"
