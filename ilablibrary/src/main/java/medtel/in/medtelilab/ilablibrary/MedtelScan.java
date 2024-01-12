@@ -324,6 +324,7 @@ public class MedtelScan extends AppCompatActivity {
                 System.out.println("devicetypes" + deviceType + "||" + deviceName + "||" + deviceAddress + "||" + medteldevicelist.size());
 
                 jsonstringlist = String.valueOf(deviceType);
+                bpconnectfollow = false;
                 if (medteldevicelist.contains(result.getDevice().getAddress())) {
 
                     if (result.getDevice().getName() != null) {
@@ -736,7 +737,7 @@ public class MedtelScan extends AppCompatActivity {
             if (checkGPSIsOpen()) {
                 //   setScanRule();
                 startScan();
-                bpstartscan();
+               // bpstartscan();
             }
         }
     }
